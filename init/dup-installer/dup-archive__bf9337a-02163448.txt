@@ -1,0 +1,491 @@
+{
+    "dup_type": "lite",
+    "created": "2023-09-02 16:34:48",
+    "version_dup": "1.5.5.1",
+    "version_wp": "6.3.1",
+    "version_db": "5.7.42",
+    "version_php": "8.2.10",
+    "version_os": "Linux",
+    "blogname": "chevalier.hotel",
+    "exportOnlyDB": 0,
+    "secure_on": false,
+    "secure_pass": "$2a$08$KeHRbHRKWDkNd2iAX1otbOsMJcRZg3kRi59707IbVle4F4qyIk4xy",
+    "dbhost": null,
+    "dbname": null,
+    "dbuser": null,
+    "cpnl_host": null,
+    "cpnl_user": null,
+    "cpnl_pass": null,
+    "cpnl_enable": null,
+    "wp_tableprefix": "wp_",
+    "mu_mode": 0,
+    "mu_generation": 0,
+    "mu_siteadmins": [
+        "admin"
+    ],
+    "subsites": [
+        {
+            "id": 1,
+            "domain": "chevalier.webdeveloper.com.ua",
+            "path": "\/",
+            "blogname": "chevalier.hotel",
+            "blog_prefix": "wp_",
+            "filteredTables": [],
+            "adminUsers": [
+                {
+                    "ID": "1",
+                    "user_login": "developer__chevalier",
+                    "id": "1"
+                }
+            ],
+            "fullHomeUrl": "https:\/\/chevalier.webdeveloper.com.ua",
+            "fullSiteUrl": "https:\/\/chevalier.webdeveloper.com.ua",
+            "uploadPath": "wp-content\/uploads",
+            "fullUploadPath": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/uploads",
+            "fullUploadSafePath": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/uploads",
+            "fullUploadUrl": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content\/uploads",
+            "filteredPaths": []
+        }
+    ],
+    "main_site_id": 1,
+    "mu_is_filtered": false,
+    "license_limit": 0,
+    "license_type": 0,
+    "dbInfo": {
+        "buildMode": "MYSQLDUMP",
+        "charSetList": [
+            "utf8mb4",
+            "utf8"
+        ],
+        "collationList": [
+            "utf8_general_ci",
+            "utf8mb4_unicode_520_ci"
+        ],
+        "engineList": [
+            "InnoDB"
+        ],
+        "isTablesUpperCase": 0,
+        "isNameUpperCase": 0,
+        "name": "qodeum_chevalier",
+        "tablesBaseCount": 18,
+        "tablesFinalCount": 18,
+        "muFilteredTableCount": 0,
+        "tablesRowCount": 2658,
+        "tablesSizeOnDisk": 2785280,
+        "tablesList": {
+            "wp_commentmeta": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 49152
+            },
+            "wp_comments": {
+                "inaccurateRows": 1,
+                "insertedRows": 0,
+                "size": 98304
+            },
+            "wp_duplicator_packages": {
+                "inaccurateRows": 1,
+                "insertedRows": 1,
+                "size": 32768
+            },
+            "wp_links": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 32768
+            },
+            "wp_options": {
+                "inaccurateRows": 391,
+                "insertedRows": 391,
+                "size": 1146880
+            },
+            "wp_postmeta": {
+                "inaccurateRows": 1657,
+                "insertedRows": 1657,
+                "size": 475136
+            },
+            "wp_posts": {
+                "inaccurateRows": 407,
+                "insertedRows": 407,
+                "size": 311296
+            },
+            "wp_termmeta": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 49152
+            },
+            "wp_terms": {
+                "inaccurateRows": 3,
+                "insertedRows": 4,
+                "size": 49152
+            },
+            "wp_term_relationships": {
+                "inaccurateRows": 29,
+                "insertedRows": 34,
+                "size": 32768
+            },
+            "wp_term_taxonomy": {
+                "inaccurateRows": 4,
+                "insertedRows": 4,
+                "size": 49152
+            },
+            "wp_usermeta": {
+                "inaccurateRows": 73,
+                "insertedRows": 82,
+                "size": 49152
+            },
+            "wp_users": {
+                "inaccurateRows": 0,
+                "insertedRows": 1,
+                "size": 65536
+            },
+            "wp_yoast_indexable": {
+                "inaccurateRows": 35,
+                "insertedRows": 36,
+                "size": 147456
+            },
+            "wp_yoast_indexable_hierarchy": {
+                "inaccurateRows": 33,
+                "insertedRows": 33,
+                "size": 65536
+            },
+            "wp_yoast_migrations": {
+                "inaccurateRows": 24,
+                "insertedRows": 24,
+                "size": 32768
+            },
+            "wp_yoast_primary_term": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 49152
+            },
+            "wp_yoast_seo_links": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 49152
+            }
+        },
+        "varLowerCaseTables": "0",
+        "dbEngine": "Percona",
+        "version": "5.7.42",
+        "versionComment": "Percona Server (GPL), Release 46, Revision e1995a8bb71",
+        "viewCount": 0,
+        "procCount": 0,
+        "funcCount": 0,
+        "triggerList": []
+    },
+    "packInfo": {
+        "packageId": 1,
+        "packageName": "20230902_chevalierhotel",
+        "packageHash": "bf9337a-02163448",
+        "secondaryHash": "d3acce0-02163448"
+    },
+    "fileInfo": {
+        "dirCount": 775,
+        "fileCount": 6533,
+        "size": 83273379
+    },
+    "wpInfo": {
+        "version": "6.3.1",
+        "is_multisite": false,
+        "network_id": 1,
+        "targetRoot": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier",
+        "targetPaths": [
+            "\/home\/qodeum\/webdeveloper.com.ua\/chevalier"
+        ],
+        "adminUsers": [
+            {
+                "ID": "1",
+                "user_login": "developer__chevalier",
+                "id": "1"
+            }
+        ],
+        "configs": {
+            "defines": {
+                "ABSPATH": {
+                    "value": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/",
+                    "inWpConfig": true
+                },
+                "DB_CHARSET": {
+                    "value": "utf8mb4",
+                    "inWpConfig": true
+                },
+                "DB_COLLATE": {
+                    "value": "",
+                    "inWpConfig": true
+                },
+                "AUTH_KEY": {
+                    "value": "I5r;^z@vUF@zNy*LoMRKy|?#gysSE)5Kfq%?f6!u5>iS`_htvzBLD0af*xVGsdzd",
+                    "inWpConfig": true
+                },
+                "SECURE_AUTH_KEY": {
+                    "value": ")|nr5e=U3D5J>g*Cmh?$<CnJfU%@:04EvrDKu\/y][`Q1Ev:M7B@x7~-)Wz|,0O,z",
+                    "inWpConfig": true
+                },
+                "LOGGED_IN_KEY": {
+                    "value": "l\/[=YX&wzXR(.KvpzqB|Pq[D8cBvk,l5AT*ZEpi*2+<{25H,|u]`<>jJDIRFttKD",
+                    "inWpConfig": true
+                },
+                "NONCE_KEY": {
+                    "value": "@\/iJo~dAte;6V,SX<!=D\/#~(k}9[G7d7h(eTVoXbrLyx+@EAM+ <A\/pX!k.B?,5H",
+                    "inWpConfig": true
+                },
+                "AUTH_SALT": {
+                    "value": "iV!|:,nbVzI70S~ Lr{;hr6-~4y:7 <wPX~qy8kyltr1Dw+QB=XjGw{:hw1@IDku",
+                    "inWpConfig": true
+                },
+                "SECURE_AUTH_SALT": {
+                    "value": "ycJ5x+fHvfn26K![39i2^c^,bvp9(lDw}f#Z& ;qoqqwvv#zNq*`?!#.mR+[H`Py",
+                    "inWpConfig": true
+                },
+                "LOGGED_IN_SALT": {
+                    "value": "qJVx?[K1!yc. qXtZRQ98Aq+|e#Obz3mWls(|#tB]9RTUEhwGw}xo}1XkUCSPX&d",
+                    "inWpConfig": true
+                },
+                "NONCE_SALT": {
+                    "value": "f^w.w!g9X(HWxF||zhIDoP~d\/~86E2j%-T1MK|I`{cK3|^:SY-:qfU0@gkU?*gGd",
+                    "inWpConfig": true
+                },
+                "WP_CONTENT_DIR": {
+                    "value": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content",
+                    "inWpConfig": false
+                },
+                "WP_CONTENT_URL": {
+                    "value": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content",
+                    "inWpConfig": false
+                },
+                "WP_PLUGIN_DIR": {
+                    "value": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/plugins",
+                    "inWpConfig": false
+                },
+                "WP_PLUGIN_URL": {
+                    "value": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content\/plugins",
+                    "inWpConfig": false
+                },
+                "PLUGINDIR": {
+                    "value": "wp-content\/plugins",
+                    "inWpConfig": false
+                },
+                "AUTOSAVE_INTERVAL": {
+                    "value": 60,
+                    "inWpConfig": false
+                },
+                "WP_POST_REVISIONS": {
+                    "value": true,
+                    "inWpConfig": false
+                },
+                "COOKIE_DOMAIN": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "MULTISITE": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "WP_DEBUG": {
+                    "value": false,
+                    "inWpConfig": true
+                },
+                "SCRIPT_DEBUG": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "WP_DEBUG_LOG": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "WP_DEBUG_DISPLAY": {
+                    "value": true,
+                    "inWpConfig": false
+                },
+                "WP_MEMORY_LIMIT": {
+                    "value": "40M",
+                    "inWpConfig": false
+                },
+                "WP_MAX_MEMORY_LIMIT": {
+                    "value": "1024M",
+                    "inWpConfig": false
+                },
+                "WP_CACHE": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "WP_LANG_DIR": {
+                    "value": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/languages",
+                    "inWpConfig": false
+                },
+                "WP_CRON_LOCK_TIMEOUT": {
+                    "value": 60,
+                    "inWpConfig": false
+                },
+                "COOKIEPATH": {
+                    "value": "\/",
+                    "inWpConfig": false
+                },
+                "SITECOOKIEPATH": {
+                    "value": "\/",
+                    "inWpConfig": false
+                },
+                "ADMIN_COOKIE_PATH": {
+                    "value": "\/wp-admin",
+                    "inWpConfig": false
+                },
+                "PLUGINS_COOKIE_PATH": {
+                    "value": "\/wp-content\/plugins",
+                    "inWpConfig": false
+                },
+                "TEMPLATEPATH": {
+                    "value": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/themes\/chevalier",
+                    "inWpConfig": false
+                },
+                "STYLESHEETPATH": {
+                    "value": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/themes\/chevalier",
+                    "inWpConfig": false
+                },
+                "EMPTY_TRASH_DAYS": {
+                    "value": 30,
+                    "inWpConfig": false
+                },
+                "FORCE_SSL_ADMIN": {
+                    "value": true,
+                    "inWpConfig": false
+                },
+                "WPMU_PLUGIN_DIR": {
+                    "value": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/mu-plugins",
+                    "inWpConfig": false
+                },
+                "WPMU_PLUGIN_URL": {
+                    "value": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content\/mu-plugins",
+                    "inWpConfig": false
+                },
+                "MUPLUGINDIR": {
+                    "value": "wp-content\/mu-plugins",
+                    "inWpConfig": false
+                }
+            },
+            "realValues": {
+                "siteUrl": "https:\/\/chevalier.webdeveloper.com.ua",
+                "homeUrl": "https:\/\/chevalier.webdeveloper.com.ua",
+                "loginUrl": "https:\/\/chevalier.webdeveloper.com.ua\/wp-login.php",
+                "contentUrl": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content",
+                "uploadBaseUrl": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content\/uploads",
+                "pluginsUrl": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content\/plugins",
+                "mupluginsUrl": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content\/mu-plugins",
+                "themesUrl": "https:\/\/chevalier.webdeveloper.com.ua\/wp-content\/themes",
+                "originalPaths": {
+                    "home": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier",
+                    "abs": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier",
+                    "wpconfig": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier",
+                    "wpcontent": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content",
+                    "uploads": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/uploads",
+                    "plugins": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/plugins",
+                    "muplugins": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/mu-plugins",
+                    "themes": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/themes"
+                },
+                "archivePaths": {
+                    "home": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier",
+                    "abs": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier",
+                    "wpconfig": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier",
+                    "wpcontent": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content",
+                    "uploads": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/uploads",
+                    "plugins": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/plugins",
+                    "muplugins": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/mu-plugins",
+                    "themes": "\/home\/qodeum\/webdeveloper.com.ua\/chevalier\/wp-content\/themes"
+                }
+            }
+        },
+        "plugins": {
+            "advanced-custom-fields-pro\/acf.php": {
+                "slug": "advanced-custom-fields-pro\/acf.php",
+                "name": "Advanced Custom Fields PRO",
+                "version": "6.2.0",
+                "pluginURI": "https:\/\/www.advancedcustomfields.com",
+                "author": "WP Engine",
+                "authorURI": "https:\/\/wpengine.com\/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=plugin_directory&utm_content=advanced_custom_fields",
+                "description": "Customize WordPress with powerful, professional and intuitive fields.",
+                "title": "Advanced Custom Fields PRO",
+                "networkActive": false,
+                "active": true,
+                "mustUse": false,
+                "dropIns": false
+            },
+            "duplicator\/duplicator.php": {
+                "slug": "duplicator\/duplicator.php",
+                "name": "Duplicator",
+                "version": "1.5.5.1",
+                "pluginURI": "https:\/\/duplicator.com\/",
+                "author": "Duplicator",
+                "authorURI": "https:\/\/duplicator.com\/",
+                "description": "Migrate and backup a copy of your WordPress files and database. Duplicate and move a site from one location to another quickly.",
+                "title": "Duplicator",
+                "networkActive": false,
+                "active": true,
+                "mustUse": false,
+                "dropIns": false
+            },
+            "wp-multilang\/wp-multilang.php": {
+                "slug": "wp-multilang\/wp-multilang.php",
+                "name": "WP Multilang",
+                "version": "2.4.1",
+                "pluginURI": "https:\/\/github.com\/VaLeXaR\/wp-multilang",
+                "author": "Valentyn Riaboshtan",
+                "authorURI": "",
+                "description": "Multilingual plugin for WordPress",
+                "title": "WP Multilang",
+                "networkActive": false,
+                "active": true,
+                "mustUse": false,
+                "dropIns": false
+            },
+            "wordpress-seo\/wp-seo.php": {
+                "slug": "wordpress-seo\/wp-seo.php",
+                "name": "Yoast SEO",
+                "version": "21.0",
+                "pluginURI": "https:\/\/yoa.st\/1uj",
+                "author": "Team Yoast",
+                "authorURI": "https:\/\/yoa.st\/1uk",
+                "description": "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.",
+                "title": "Yoast SEO",
+                "networkActive": false,
+                "active": true,
+                "mustUse": false,
+                "dropIns": false
+            }
+        },
+        "themes": {
+            "chevalier": {
+                "slug": "chevalier",
+                "themeName": "Chevalier",
+                "version": "1.0.0",
+                "themeURI": "https:\/\/webdeveloper.com.ua\/",
+                "parentTheme": false,
+                "template": "chevalier",
+                "stylesheet": "chevalier",
+                "description": "",
+                "author": "webdeveloper.com.ua",
+                "authorURI": "https:\/\/t.me\/webdeveloper_com_ua",
+                "tags": [],
+                "isAllowed": true,
+                "isActive": true,
+                "defaultTheme": false
+            }
+        }
+    },
+    "opts_delete": "[\"duplicator_ui_view_state\",\"duplicator_package_active\",\"duplicator_settings\",\"duplicator_is_pro_enable_notice_dismissed\"]",
+    "brand": {
+        "name": "Duplicator",
+        "isDefault": true,
+        "logo": "<i class=\"fa fa-bolt fa-sm\"><\/i> Duplicator",
+        "enabled": false,
+        "style": []
+    },
+    "overwriteInstallerParams": {
+        "blogname": {
+            "value": "chevalier.hotel"
+        }
+    },
+    "installer_base_name": "installer.php.bak",
+    "installer_backup_name": "20230902_chevalierhotel_bf9337afe764673c8087_20230902163448_installer-backup.php",
+    "package_name": "20230902_chevalierhotel_bf9337afe764673c8087_20230902163448_archive.zip",
+    "package_hash": "bf9337a-02163448",
+    "package_notes": ""
+}

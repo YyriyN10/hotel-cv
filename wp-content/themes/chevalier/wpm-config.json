@@ -1,0 +1,15 @@
+{
+  "post_types": {
+    "room": {},
+    "review": {},
+    "service": {}
+  },
+  "taxonomies": {
+    "room_cat": {},
+    "review_cat": {},
+    "service_cat": {}
+  },
+  "admin_pages": [
+    "toplevel_page_theme-general-settings"
+  ]
+}
