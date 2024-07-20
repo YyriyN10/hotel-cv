@@ -12,23 +12,28 @@
 
 get_header(); ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main fulpage-wrapper">
 
-  <?php // Template Part: Page Header
-  get_template_part('template-parts/content-header'); ?>
+  <section id="hero" class="announce section full-height">
 
-  <?php /* room feed */ foreach ($posts = get_posts(array('numberposts' => -1, 'post_type' => 'room')) as $post) : setup_postdata($post); ?>
+		<?php // Section: Hero
+			get_template_part('template-sections/section-hero'); ?>
 
-    <section id="<?php echo get_post_type(), '-', get_the_ID(); ?>" class="announce">
+  </section>
 
-      <?php // Section: Media Announce
-      get_template_part('template-sections/section-media-announce'); ?>
+	<?php /* room feed */ foreach ($posts = get_posts(array('numberposts' => -1, 'post_type' => 'room')) as $post) : setup_postdata($post); ?>
+
+    <section id="<?php echo get_post_type(), '-', get_the_ID(); ?>" class="announce section full-height">
+
+			<?php // Section: Media Announce
+				get_template_part('template-sections/section-media-announce'); ?>
 
     </section>
 
-  <?php /* room feed end */ endforeach;
-  wp_reset_postdata(); ?>
+	<?php /* room feed end */ endforeach;
+		wp_reset_postdata(); ?>
 
+
+	<?php get_footer(); ?>
 </main>
 
-<?php get_footer(); ?>

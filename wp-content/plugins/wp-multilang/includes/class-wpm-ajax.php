@@ -96,6 +96,11 @@ class WPM_AJAX {
 			'qtx_import'           => false,
 			'rated'                => false,
 			'send_query_message'   => false,
+			'send_feedback'   	   => false,
+			'subscribe_to_news_letter' => false,
+			'newsletter_hide_form' => false,
+			'settings_newsletter_submit' => false,
+			'block_lang_switcher' => true
 		);
 
 		foreach ( $ajax_events as $ajax_event => $nopriv ) {
@@ -297,7 +302,7 @@ class WPM_AJAX {
 	}
 
 	/**
-	 * Triggered when anu support query is sent from Help & Support tab
+	 * Triggered when any support query is sent from Help & Support tab
 	 * @since 2.4.2
 	 * */
 	public static function send_query_message()
@@ -350,5 +355,201 @@ class WPM_AJAX {
 	                    
 	    wp_die(); 
 	}
+	
+	/**
+	 * Triggered when any support query is sent from Help & Support tab
+	 * @since 2.4.6
+	 * */
+	public static function send_feedback()
+	{
+		if ( ! current_user_can( 'manage_translations' ) ) {
+			wp_die( -1 );
+		}
 
+		if( isset( $_POST['data'] ) ) {
+	        parse_str( $_POST['data'], $data );
+	    }
+
+	    if(!isset($data['wpm_feedback_nonce'])){
+	    	wp_die( -1 );
+	    }
+
+	    if ( !wp_verify_nonce( $data['wpm_feedback_nonce'], 'wpm_feedback_nonce' ) ){
+       		return;  
+    	}
+
+		$text = '';
+	    if( isset( $data['wpm_disable_text'] ) ) {
+	        $text = implode( "\n\r", $data['wpm_disable_text'] );
+	    }
+
+	    $headers = array();
+
+	    $from = isset( $data['wpm_disable_from'] ) ? $data['wpm_disable_from'] : '';
+	    if( $from ) {
+	    	$headers[] = 'Content-Type: text/html; charset=UTF-8';
+	        $headers[] = "From: $from";
+	        $headers[] = "Reply-To: $from";
+	    }
+
+	    $subject = isset( $data['wpm_disable_reason'] ) ? $data['wpm_disable_reason'] : '(no reason given)';
+
+	    if($subject == 'technical'){
+	    	  $subject = $subject.' - WP Multilang';
+	    	  
+	          $text = trim($text);
+
+	          if(!empty($text)){
+
+	            $text = 'technical issue description: '.$text;
+
+	          }else{
+
+	            $text = 'no description: '.$text;
+	          }
+	      
+	    }
+
+	    $success = wp_mail( 'team@magazine3.in', $subject, $text, $headers );
+
+		wp_die();
+	}
+	
+	/**
+	 * Triggered when any newsletter subscribe button is clicked
+	 * @since 2.4.7
+	 * */
+	public static function subscribe_to_news_letter(){
+  
+		if(!current_user_can('manage_options')){
+            wp_die( -1 );    
+        }
+
+        if ( ! isset( $_POST['wpm_security_nonce'] ) ){
+            wp_die( -1 ); 
+        }
+
+        if ( !wp_verify_nonce( $_POST['wpm_security_nonce'], 'wpm_security_nonce' ) ){
+           wp_die( -1 );  
+        }
+                        
+    	$name    = isset($_POST['name'])?sanitize_text_field($_POST['name']):'';
+        $email   = isset($_POST['email'])?sanitize_text_field($_POST['email']):'';
+        $website = isset($_POST['website'])?sanitize_text_field($_POST['website']):'';
+        
+        if($email){
+                
+            $api_url = 'http://magazine3.company/wp-json/api/central/email/subscribe';
+
+		    $api_params = array(
+		        'name'    => $name,
+		        'email'   => $email,
+		        'website' => $website,
+		        'type'    => 'wpmultilang'
+		            );
+		            
+		    $response = wp_remote_post( $api_url, array( 'timeout' => 15, 'sslverify' => false, 'body' => $api_params ) );
+		            $response = wp_remote_retrieve_body( $response );                    
+		    echo $response;
+
+        }else{
+                echo esc_html__('Email id required', 'wp-multilang');                        
+        }                        
+
+        wp_die();
+	}
+
+	/**
+	 * Triggered when clicked on close button of newsletter form present in settings 
+	 * @since 2.4.7
+	 * */
+	public static function newsletter_hide_form(){  
+		if(!current_user_can('manage_options')){
+            wp_die( -1 );    
+        }
+
+        if ( ! isset( $_POST['wpm_admin_settings_nonce'] ) ){
+            wp_die( -1 ); 
+        }
+
+        if ( !wp_verify_nonce( $_POST['wpm_admin_settings_nonce'], 'wpm_admin_settings_nonce' ) ){
+           wp_die( -1 );  
+        } 
+
+		update_option( 'wpm_hide_newsletter', 'yes' , false);
+
+		echo wp_json_encode(array('status'=>200, 'message'=>esc_html__('Submitted ','wp-multilang')));
+
+	    wp_die();
+	}
+
+	/**
+	 * Triggered when clicked on subscribe button of newsletter form present in settings
+	 * @since 2.4.7
+	 * */
+	public static function settings_newsletter_submit(){  
+		if(!current_user_can('manage_options')){
+            wp_die( -1 );    
+        }
+
+        if ( ! isset( $_POST['wpm_admin_settings_nonce'] ) ){
+            wp_die( -1 ); 
+        }
+
+        if ( !wp_verify_nonce( $_POST['wpm_admin_settings_nonce'], 'wpm_admin_settings_nonce' ) ){
+           wp_die( -1 );  
+        } 
+
+	    if(issset($_POST['email']) && !empty($_POST['email'])){
+			global $current_user;
+			$api_url = 'http://magazine3.company/wp-json/api/central/email/subscribe';
+		    $api_params = array(
+		        'name' => sanitize_text_field($current_user->display_name),
+		        'email'=> sanitize_email($_POST['email']),
+		        'website'=> sanitize_url( get_site_url() ),
+		        'type'=> 'wpmultilang'
+		    );
+
+		    $response = wp_remote_post( $api_url, array( 'timeout' => 15, 'sslverify' => false, 'body' => $api_params ) );
+			if ( !is_wp_error( $response ) ) {
+				$response = wp_remote_retrieve_body( $response );
+				echo wp_json_encode(array('status'=>200, 'message'=>esc_html__('Submitted ','wp-multilang'), 'response'=> $response));
+			}else{
+				echo wp_json_encode(array('status'=>500, 'message'=>esc_html__('No response from API','wp-multilang')));	
+			}
+		    wp_die();
+		}
+	}
+
+	/**
+	 * Prepare url to change the href of block language switcher
+	 * @since 2.4.9
+	 * */
+	public static function block_lang_switcher(){  
+        if ( ! isset( $_POST['security'] ) ){
+            wp_die( -1 ); 
+        }
+
+        if ( !wp_verify_nonce( $_POST['security'], 'wpm_ajax_security_nonce' ) ){
+           wp_die( -1 );  
+        } 
+
+        if(empty($_POST['current_url'])){
+        	wp_die( -1 );  
+        }
+
+        $all_languages = wpm_get_languages();
+
+		$current_url = sanitize_url($_POST['current_url']);
+
+		$translated_urls = array();
+		if(!empty($all_languages) && is_array($all_languages)){
+			foreach ($all_languages as $al_key => $al_value) {
+				$translated_urls[$al_key] = wpm_translate_url( $current_url, $al_key );
+			}
+		}
+
+		echo wp_json_encode($translated_urls);
+		wp_die();
+    }
 }

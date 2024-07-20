@@ -54,6 +54,7 @@ function chevalier_setup()
 			'menu-1' => esc_html__('Primary Menu', 'chevalier'),
 			'menu-2' => esc_html__('Room Menu', 'chevalier'),
 			'menu-3' => esc_html__('Service Menu', 'chevalier'),
+			'menu-4' => esc_html__('Footer Menu', 'chevalier'),
 		)
 	);
 
@@ -121,9 +122,12 @@ function chevalier_scripts()
 	// Style
 	wp_enqueue_style('chevalier-style', get_theme_file_uri('/style.css'), array(), '1.0.0');
 	wp_enqueue_style('chevalier-normalize', get_theme_file_uri('/assets/css/normalize.css'), array(), '8.0.1');
+	wp_enqueue_style('chevalier-fullpage', get_theme_file_uri('/assets/css/fullpage.css'), array(), '1.0.0');
+	wp_enqueue_style('chevalier-custom-style', get_theme_file_uri('/assets/css/custom-styles.min.css'), array(), '1.0.0');
 
 	// jQuery
 	wp_enqueue_script('chevalier-jquery', get_theme_file_uri('/assets/js/jquery.min.js'), array(), '3.6.0');
+	wp_enqueue_script('chevalier-custom-js', get_theme_file_uri('/assets/js/main.min.js'), array(), '1.6.0');
 
 	// JavaScript
 	wp_enqueue_script('chevalier-template', get_theme_file_uri('/assets/js/template.js'), array(), '1.0.0', true);
@@ -144,8 +148,8 @@ function chevalier_scripts()
 	wp_enqueue_script('chevalier-aos', get_theme_file_uri('/assets/js/aos.min.js'), array(), '2.3.1');
 
 	// Google Fonts
-	wp_enqueue_style('chevalier-serif', 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&display=swap', array(), wp_get_theme()->get('Version'));
-	wp_enqueue_style('chevalier-sans-serif', 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap', array(), wp_get_theme()->get('Version'));
+	/*wp_enqueue_style('chevalier-serif', 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&display=swap', array(), wp_get_theme()->get('Version'));
+	wp_enqueue_style('chevalier-sans-serif', 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap', array(), wp_get_theme()->get('Version'));*/
 
 
 	// Comments
@@ -208,3 +212,74 @@ add_action('after_setup_theme', 'disable_gutenberg_for_widgets');
 add_filter('get_the_archive_title', function ($title) {
 	return preg_replace('~^[^:]+: ~', '', $title);
 });
+
+
+// свой класс построения меню:
+	class My_Walker_Nav_Menu extends Walker_Nav_Menu {
+
+		// add classes to ul sub-menus
+		function start_lvl( &$output, $depth = 0, $args = NULL ) {
+			// depth dependent classes
+			$indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
+			$display_depth = ( $depth + 1); // because it counts the first submenu as 0
+			$classes = array(
+				'sub-menu',
+				( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
+				( $display_depth >=2 ? 'sub-sub-menu' : '' ),
+				'menu-depth-' . $display_depth
+			);
+			$class_names = implode( ' ', $classes );
+
+			// build html
+			$output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
+		}
+
+		// add main/sub classes to li's and links
+		function start_el( &$output, $data_object, $depth = 0, $args = null, $current_object_id = 0 ) {
+			global $wp_query;
+
+			// Restores the more descriptive, specific name for use within this method.
+			$item = $data_object;
+
+			$indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+
+			// depth dependent classes
+			$depth_classes = array(
+				( $depth == 0 ? 'main-menu-item' : 'sub-menu-item' ),
+				( $depth >=2 ? 'sub-sub-menu-item' : '' ),
+				( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
+				'menu-item-depth-' . $depth
+			);
+			$depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
+
+			// passed classes
+			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+			$class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
+
+			// build html
+			$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
+
+			$icon = get_field('zobrazhenya_dlya_animacziyi', $item);
+
+			// link attributes
+			$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+			$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+			$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+			$attributes .= ! empty( $item->url )        ? ' href='   . esc_attr( $item->url        ) .'"' : '';
+			$attributes .= ! empty( $item->url )        ? ' data-image='   . esc_attr( $icon        ) .'"' : '';
+			$attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
+
+			$item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
+				$args->before,
+				$attributes,
+				$args->link_before,
+				apply_filters( 'the_title', $item->title, $item->ID ),
+				$args->link_after,
+				$args->after
+			);
+
+			// build html
+			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+		}
+
+	}

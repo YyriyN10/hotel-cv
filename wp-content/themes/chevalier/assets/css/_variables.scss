@@ -1,0 +1,16 @@
+/*--- Fonts ---*/
+
+$f-corm-reg:'Cormorant-regular';
+$f-corm-med_i:'Cormorant-medium-italic';
+$f-corm-med:'Cormorant-medium';
+$f-inter-light: 'Inter-light';
+$f-inter-reg: 'Inter-regular';
+$f-inter-med: 'Inter-medium';
+$f-inter-bold: 'Inter-bold';
+$f-mont-reg: 'Mont-Regular';
+
+@media (min-width: 1200px){
+  .container {
+    max-width: 1200px !important;
+  }
+}

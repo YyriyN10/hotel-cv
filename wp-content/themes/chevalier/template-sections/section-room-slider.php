@@ -2,7 +2,7 @@
 
   <div class="container">
 
-    <div class="row">
+    <div class="row top-content">
       <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 
         <?php /* Headline */ if (!empty($headline = $section['headline'])) : ?>
@@ -22,14 +22,14 @@
 
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <div class="buttons">
-          <a class="button-xl lined whited" href="<?php echo wpm_translate_url(home_url('/room/'), wpm_get_language()); ?>"><?php _e("[:uk]Двитись всі номери[:ru]Смотреть все номера[:en]See all numbers"); ?></a>
+          <a class="button-xl lined whited line-button" href="<?php echo wpm_translate_url(home_url('/room/'), wpm_get_language()); ?>"><?php _e("[:uk]Дивтись всі номери[:ru]Смотреть все номера[:en]See all numbers"); ?></a>
         </div>
       </div>
     </div>
 
   </div>
 
-  <div class="slider" style="margin-top: 32px;">
+  <div class="slider home-room-slider">
 
     <div id="room-slider" class="swiper" style="padding: 0 512px;">
       <div class="swiper-wrapper">
@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <!--<div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div id="room-slider__control" class="swiper-control">
@@ -61,19 +61,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <script>
       var swiper = new Swiper("#room-slider", {
         initialSlide: 1,
-        pagination: {
+        /*pagination: {
           clickable: true,
           el: "#room-slider__control .swiper-pagination",
         },
         navigation: {
           nextEl: "#room-slider__control .swiper-button__next",
           prevEl: "#room-slider__control .swiper-button__prev",
-        },
+        },*/
         spaceBetween: 32,
       });
     </script>

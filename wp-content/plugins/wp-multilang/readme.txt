@@ -1,16 +1,16 @@
-=== WP Multilang ===
+=== WP Multilang - Translation and Multilingual Plugin ===
 
 Contributors: magazine3
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EKM42LUA5CVZ4&source=url
+Donate link: https://paypal.me/kaludi
 Tags: localization, multilanguage, multilingual, translation, multilang
 Requires at least: 4.7
-Tested up to: 6.4
-Stable tag: 2.4.5
+Tested up to: 6.5
+Stable tag: 2.4.9
 Requires PHP: 5.6.20
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Multilingual plugin for WordPress.
+Multilingual plugin for WordPress. Go Multilingual in minutes with full WordPress support. Translate your site easily with this localization plugin.
 
 == Description ==
 
@@ -18,7 +18,10 @@ WP Multilang is a multilingual plugin for WordPress.
 
 Translations of post types, taxonomies, meta fields, options, text fields in miltimedia files, menus, titles and text fields in widgets.
 
+[Home](https://wp-multilang.com/) | [Help & Tech Support](https://wp-multilang.com/contact-us/) | [Documentation](https://wp-multilang.com/docs/) | [Premium Features](https://wp-multilang.com/#features)
+
 == New Features of the plugin WP Multilang ==
+* Support full site editor for block based themes
 * Support block based widgets
 * Support different feature image for each language
 
@@ -43,6 +46,7 @@ Translations of post types, taxonomies, meta fields, options, text fields in mil
 
 == WP Multilang compatible with plugins ==
 
+* Elementor ( [available in premium version](https://wp-multilang.com/) ) - [View Tutorial](https://wp-multilang.com/docs)
 * ACF, ACF Pro
 * WooCommerce
 * WooCommerce Customizer
@@ -188,6 +192,12 @@ NOTE: Because plugins have different ways of storing data, WP Multilang is not c
 
 Please try WP Multilang in a test-environment before activating it on an existing production site and always make a backup before activating!
 
+[Home](https://wp-multilang.com/) | [Help & Tech Support](https://wp-multilang.com/contact-us/) | [Documentation](https://wp-multilang.com/docs/) | [Premium](https://wp-multilang.com/)
+
+== Support ==
+
+We try our best to provide support on WordPress.org forums. However, We have a special [community support](https://wp-multilang.com/contact-us/) where you can ask us questions and get help about your WP Multilang related questions. Delivering a good user experience means a lot to us and so we try our best to reply each and every question that gets asked.
+
 == Bug Reports ==
 
 Bug reports for WP Multilang are [welcomed on GitHub](https://github.com/ahmedkaludi/wp-multilang/issues). Please note GitHub is not a support forum, and issues that aren't properly qualified as bugs will be closed.
@@ -217,6 +227,30 @@ If you have opened several browser tabs for editing this post in different langu
 5. Post edit page
 
 == Changelog ==
+
+= 2.4.9 =
+- feature WordPress full site editing support #46
+- fixed Conflicts with the Newsletter plugin #61
+- enhancement Changed premium tab to Premium Features in readme.txt #80
+- feature Added Language Switcher Gutenberg Block #82
+
+= 2.4.8 =
+- fixed admin_html_tags leaving empty fields #41
+- feature Gutenberg view post should redirect to current language post #55
+- fixed Conflicts with the Newsletter plugin #61
+- feature Woocommerce product attributes translation issue #70
+- fixed Issue with CF7 form #73
+- fixed Language switch button interface Guternberg block button  #74
+
+= 2.4.7 =
+- fixed Call to undefined function #65
+- feature Admin settings page UI/UX changes #67
+- feature Added Newsletter Form #68
+
+= 2.4.6 =
+- enhancement Updated website links like contact page and other info in plugin and wp.org #45
+- feature Adedd feedback popup on deactivation #54
+- feature Added compatibility with Elementor (Premium) 
 
 = 2.4.5 =
 - feature Different product or post images for each language #20
@@ -272,26 +306,5 @@ If you have opened several browser tabs for editing this post in different langu
 = 2.2.5 =
 - fixed Gutenberg compatibility
 - fixed translation WC coupons
-
-= 2.2.4 =
-- added "no-cache" header in admin on language change
-- added WC coupon for translating
-- fixed compatibility with SiteOrigin
-- fixed http to https redirect error
-- fixed styles
-
-= 2.2.3 =
-- fix translate menu
-- fix translating
-- fix saving metabox
-- fix set home url in subfolder
-
-= 2.2.2 =
-- added shortcode for display language switcher
-- add filters for set json config files for integration
-- fixed checking for ml strings
-- fixed compatibility with Gutenberg
-- fixed checking for JSON strings
-- fixed regex for ml strings
 
 All changelog available on [GitHub](https://github.com/ahmedkaludi/wp-multilang/releases).

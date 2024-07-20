@@ -28,7 +28,7 @@ get_header(); ?>
   endif; /* Section Booking End */ ?>
 
   <?php /* Section Hotel */ if (!empty($section = get_field('section_hotel', 'options'))) : if ($section['display']) : ?>
-      <section class="announce"  style="background: url(/wp-content/themes/chevalier/assets/media/background-2.svg) no-repeat right bottom / 780px;">
+      <section class="announce"  >
 
         <?php // Section: Hotel
         get_template_part('template-sections/section-hotel'); ?>
@@ -38,7 +38,7 @@ get_header(); ?>
   endif; /* Section Hotel End */ ?>
 
   <?php /* Section Room Slider */ if (!empty($section = get_field('section_room_slider', 'options'))) : if ($section['display']) : ?>
-      <section>
+      <section class="home-room-list">
 
         <?php // Section: Room Slider
         get_template_part('template-sections/section-room-slider'); ?>
@@ -48,7 +48,7 @@ get_header(); ?>
   endif; /* Section Room Slider End */ ?>
 
   <?php /* Section Service Selected */ if (!empty($section = get_field('section_service_selected', 'options'))) : if ($section['display']) : ?>
-      <section class="announce">
+      <section class="announce home-spa">
 
         <?php // Section: Service Selected
         get_template_part('template-sections/section-service-selected'); ?>
@@ -58,7 +58,7 @@ get_header(); ?>
   endif; /* Section Service Selected End */ ?>
 
   <?php /* Section Service */ if (!empty($section = get_field('section_service', 'options'))) : if ($section['display']) : ?>
-      <section class="announce" style="background: url(/wp-content/themes/chevalier/assets/media/background-2.svg) no-repeat right bottom / 780px;">
+      <section class="our-services" >
 
         <?php // Section: Service
         get_template_part('template-sections/section-service'); ?>
@@ -68,7 +68,7 @@ get_header(); ?>
   endif; /* Section Service End */ ?>
 
   <?php /* Section Review Slider */ if (!empty($section = get_field('section_review_slider', 'options'))) : if ($section['display']) : ?>
-      <section>
+      <section class="reviews-wrapper">
 
         <?php // Section: Review Slider
         get_template_part('template-sections/section-review-slider'); ?>

@@ -1,0 +1,21 @@
+/*--- headline-title ---*/
+
+.headline-title{
+  font-size: 70px;
+  font-family: $f-inter-med;
+  font-style: italic;
+  letter-spacing: -2.8px;
+  line-height: 1.33;
+}
+
+/*--- line-button ---*/
+
+.buttons{
+  .line-button{
+    font-size: 24px;
+    letter-spacing: -0.84px;
+    font-family: $f-inter-reg;
+    line-height: 0.98;
+  }
+}
+

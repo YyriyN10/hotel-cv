@@ -48,6 +48,7 @@
                 <div class="review-box__textarea editor">
                   <?php echo get_field('review_textarea'); ?>
                 </div>
+                <div class="pic"><img src="<?php echo get_template_directory_uri();?>/assets/media/icon-quote.png" alt=""></div>
 
               </div>
 
@@ -69,9 +70,19 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div id="review-slider__control" class="swiper-control">
-            <div class="swiper-button__prev"><span class="iconify" data-icon="ant-design:arrow-left-outlined"></span></div>
+            <div class="swiper-button__prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+                <path d="M16.3332 24.8267L26.3332 19.0532L26.3332 30.6002L16.3332 24.8267ZM32.6665 25.8267L25.3332 25.8267L25.3332 23.8267L32.6665 23.8267L32.6665 25.8267Z" fill="white"/>
+                <circle cx="24.5" cy="24.5" r="23.5" transform="matrix(-1 0 0 1 49 0)" stroke="white" stroke-width="2"/>
+              </svg>
+            </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button__next"><span class="iconify" data-icon="ant-design:arrow-right-outlined"></span></div>
+            <div class="swiper-button__next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+                <path d="M32.6668 24.8267L22.6668 19.0532L22.6668 30.6002L32.6668 24.8267ZM16.3335 25.8267L23.6668 25.8267L23.6668 23.8267L16.3335 23.8267L16.3335 25.8267Z" fill="white"/>
+                <circle cx="24.5" cy="24.5" r="23.5" stroke="white" stroke-width="2"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>

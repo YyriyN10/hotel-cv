@@ -1,0 +1,94 @@
+
+/*--- site-footer ---*/
+
+.site-footer{
+  padding-top: 27px;
+  padding-bottom: 93px;
+
+  .content{
+    gap: 0;
+  }
+
+  .top-content{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 53px;
+
+    .site-branding{
+      width: 188px;
+      margin-right: 190px;
+
+      img{
+        width: 100%;
+        height: auto;
+        max-height: unset;
+      }
+    }
+
+    .footer-title{
+      color: #ffffff;
+      letter-spacing: 0.72px;
+      font-size: 20px;
+      line-height: 1.4;
+      font-family: $f-inter-reg;
+      margin-bottom: 0;
+    }
+  }
+
+  .bottom-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-menu{
+      gap: 22px;
+      display: grid;
+
+      a{
+        color: #ffffff;
+        text-shadow: 0px 4px 46px rgba(0, 0, 0, 0.65);
+        letter-spacing: 0.72px;
+        font-size: 24px;
+        line-height: 1.2;
+        font-family: $f-inter-reg;
+        font-style: italic;
+      }
+    }
+
+    .go-list{
+      .buttons{
+        width: 380px;
+        margin-bottom: 30px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        .line-button{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+
+
+  .contact-list{
+    margin-bottom: 27px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    p,
+    a{
+      letter-spacing: 0.72px;
+      color: #ffffff;
+      line-height: 1.7;
+      font-size: 17px;
+      font-family: $f-inter-reg;
+      margin-bottom: 0;
+    }
+  }
+}
