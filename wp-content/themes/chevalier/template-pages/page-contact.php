@@ -18,7 +18,7 @@ get_header(); ?>
   get_template_part('template-parts/content-header'); ?>
 
   <?php /* Section Contact */ if (!empty($section = get_field('site_contacts', 'options'))) : ?>
-    <section style="background: url(/wp-content/themes/chevalier/assets/media/background-1.png) no-repeat right bottom / contain;">
+    <section class="main-content-wrapper" style="background: url(/wp-content/themes/chevalier/assets/media/background-1.png) no-repeat right bottom / contain;">
 
       <?php // Section: Contact
       get_template_part('template-sections/section-contact'); ?>
@@ -27,7 +27,7 @@ get_header(); ?>
   <?php endif; /* Section Contact End */ ?>
 
   <?php /* Section Contact */ if (!empty($section = get_field('site_contacts', 'options'))) : ?>
-    <section style="padding: 0;">
+    <section  style="padding: 0;">
 
       <?php // Component: Contact Map
       get_template_part('template-components/component-contact-map'); ?>

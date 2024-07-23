@@ -2,6 +2,18 @@
 
 $(document).ready(function() {
 
+  /**
+   * Screen height and width
+   */
+
+  let windWid = $(window).width();
+  let windHei = $(window).height();
+
+  $(window).resize(function () {
+    windWid = $(window).width();
+    windHei = $(window).height();
+  });
+
   if ($('.fulpage-wrapper').length){
     $('.fulpage-wrapper').fullpage({
       fitToSection: true,
@@ -54,9 +66,40 @@ $(document).ready(function() {
       firstImageWrapper.attr('src', thisImageFirst);
       secondImageWrapper.attr('src', thisImageSecond);
     })
+  }
 
+  /**
+   * Hotel History
+   */
+
+  if ( $('.hotel-history').length ){
+
+    let itemsCount = Number($('.hotel-history .bottom-content .hotel-history__item').length);
+
+    let targetItem = Number(itemsCount - 1);
+
+    if ( windWid > 850 ){
+      $('.hotel-history .bottom-content .hotel-history__item.pic-item').css({'order' : itemsCount - 1});
+
+      $('.hotel-history .bottom-content .hotel-history__item:nth-child('+targetItem+')').css({'order' : itemsCount + 1});
+
+      $('.hotel-history .bottom-content .hotel-history__item:nth-child('+targetItem+')').addClass('last');
+    }
 
   }
+
+  /**
+   * Room Head Name
+   */
+
+  /*if ( $('.single-room').length ){
+    const roomName = $('#hero .headline-title').text();
+
+    let roomNameParts = roomName.split(' ');
+
+    $('#hero .headline-title').html('<span>'+roomNameParts[0]+'</span>'+roomNameParts[1]);
+
+  }*/
 
 
 
