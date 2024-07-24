@@ -12,18 +12,105 @@ get_header(); ?>
 
 <main id="primary" class="site-main" style="background: url(/wp-content/themes/chevalier/assets/media/mountains.svg) no-repeat center center / 840px;">
 
-	<?php // Template Part: Page Header
-	get_template_part('template-parts/content-header'); ?>
+	<?php get_template_part('template-parts/content-header'); ?>
 
-	<?php /* Content */ if (!empty($content = get_field('content'))) : if ($content['display']) : ?>
+	<?php /*if (!empty($content = get_field('content'))) : if ($content['display']) : */?><!--
 			<div class="announce-feed">
 
-				<?php // Section: Content Feed
-				get_template_part('template-sections/section-content-feed'); ?>
+				<?php /*get_template_part('template-sections/section-content-feed'); */?>
 
 			</div>
-	<?php endif;
-	endif; /* Content End */ ?>
+	--><?php /*endif;
+	endif; */?>
+
+  <?php
+      $generalDescription = get_field('bok_z_zagalnym_opysom');
+
+      if( $generalDescription['tekst_opysu'] && $generalDescription['zobrazhennya_bloku'] ):?>
+
+      <!-- Загальний опис -->
+
+      <section class="room-description-item general-description">
+        <div class="container">
+          <div class="row">
+            <div class="content col-12">
+              <div class="pic-wrapper">
+                <div class="inner">
+                  <img
+
+                     src="<?php echo wp_get_attachment_image_src($generalDescription['zobrazhennya_bloku'], 'full')[0];?>"
+                     alt="<?php echo get_post_meta($generalDescription['zobrazhennya_bloku'], '_wp_attachment_image_alt', TRUE);?>"
+                  >
+                </div>
+              </div>
+              <div class="text-content">
+                <?php echo $generalDescription['tekst_opysu'];?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <?php endif;?>
+
+	<?php
+		$advantages = get_field('bok_z_perevagamy');
+
+		if( $advantages['tekst_opysu'] && $advantages['zobrazhennya_bloku'] ):?>
+
+      <!-- Переваги -->
+
+      <section class="room-description-item advantages">
+        <div class="container">
+          <div class="row">
+            <div class="content col-12">
+              <div class="text-content">
+                <h2 class="headline-title"><?php _e("[:uk]Переваги[:ru]Преимущества[:en]Advantages") ?></h2>
+		            <?php echo $advantages['tekst_opysu'];?>
+              </div>
+              <div class="pic-wrapper">
+                <div class="inner">
+                  <img
+
+                      src="<?php echo wp_get_attachment_image_src($advantages['zobrazhennya_bloku'], 'full')[0];?>"
+                      alt="<?php echo get_post_meta($advantages['zobrazhennya_bloku'], '_wp_attachment_image_alt', TRUE);?>"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+		<?php endif;?>
+
+	<?php
+		$basicInformation = get_field('bok_z_osnovnoyu');
+
+		if( $basicInformation['tekst_opysu'] && $basicInformation['zobrazhennya_bloku'] ):?>
+
+      <!-- Основна інформація -->
+
+      <section class="room-description-item basic-information">
+        <div class="container">
+          <div class="row">
+            <div class="content col-12">
+              <div class="pic-wrapper">
+                <div class="inner">
+                  <img
+
+                      src="<?php echo wp_get_attachment_image_src($basicInformation['zobrazhennya_bloku'], 'full')[0];?>"
+                      alt="<?php echo get_post_meta($basicInformation['zobrazhennya_bloku'], '_wp_attachment_image_alt', TRUE);?>"
+                  >
+                </div>
+              </div>
+              <div class="text-content">
+                <h2 class="headline-title"><?php _e("[:uk]Основна інформація[:ru]Основная информация[:en]Basic information") ?></h2>
+								<?php echo $basicInformation['tekst_opysu'];?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+		<?php endif;?>
 
 	<?php /* Room */ if (!empty($section = get_field('room_meta'))) : ?>
 		<section style="padding-top: 0;">

@@ -1,12 +1,12 @@
 <?php /* Content */ if (!empty($content = get_field('content'))) : if ($content['display']) : $i = 1; ?>
 
     <?php foreach ((array) $sections = $content['sections'] as $section) : ?>
-      <section class="announce" style="min-height: 420px;">
+      <section class="announce" >
 
         <div class="announce-content unstyled">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+              <div class="room-section-content col-xs-12 col-sm-12 col-md-5 col-lg-5">
 
                 <?php /* Headline */ if (!empty($headline = $section['headline'])) : ?>
                   <div class="headline">
