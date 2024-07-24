@@ -24,11 +24,28 @@
 /*--- swiper-control ---*/
 
 .swiper-control{
+
+  @media(max-width: 767px){
+    bottom: 20px !important;
+  }
+
+  @media(max-width: 575px){
+    bottom: 10px !important;
+  }
+
+  @media(max-width: 440px){
+    bottom: 5px !important;
+  }
   .swiper-button__prev,
   .swiper-button__next{
     border: none;
     width: 49px;
     height: 49px;
+
+    @media(max-width: 440px){
+      width: 30px;
+      height: 30px;
+    }
   }
 
   .swiper-pagination{
@@ -37,6 +54,21 @@
       height: 30px;
       border: 2px solid #ffffff;
       background-color: rgba(0,0,0,0);
+
+      @media(max-width: 767px){
+        width: 25px;
+        height: 25px;
+      }
+
+      @media(max-width: 575px){
+        width: 20px;
+        height: 20px;
+      }
+
+      @media(max-width: 440px){
+        width: 15px;
+        height: 15px;
+      }
 
       &.swiper-pagination-bullet-active{
         background: #ffffff !important;

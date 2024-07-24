@@ -35,9 +35,9 @@
 			      <?php chevalier_addresses(); ?>
           </div>
 	      <?php /* addresses End */ endif; ?>
-        <div class="inner-logo">
+        <a href="https://chevalier-panorama.com/" class="inner-logo">
           <img src="<?php echo get_template_directory_uri();?>/assets/media/logo_panorama.png" alt="">
-        </div>
+        </a>
 
       </div>
       <div class="col-md-6 col-lg-4 offset-lg-2 offset-0 social-wrapper">
