@@ -109,6 +109,133 @@ get_header(); ?>
         </div>
       </section>
 		<?php endif;?>
+    <?php elseif ( $blockTrigger == 'spa' ):?>
+
+    <?php
+      $spsService = get_field('kontent_dlya_spa');
+
+      if ( $spsService['solyana_kimnata'] || $spsService['basejn'] || $spsService['hamam'] || $spsService['sauna']):
+    ?>
+      <section class="our-spa">
+      <div class="container">
+        <div class="row">
+          <div class="content col-12">
+            <?php if( $spsService['solyana_kimnata'] ):?>
+              <div class="service-part salt-room">
+                <div class="text-content">
+                  <h2 class="headline-title"><?php echo $spsService['solyana_kimnata']['zagolovok'];?></h2>
+                  <div class="text"><?php echo $spsService['solyana_kimnata']['tekst_opysu'];?></div>
+                </div>
+                <div class="pic-wrapper left-pic">
+                  <div class="inner">
+                    <img
+
+                        src="<?php echo wp_get_attachment_image_src($spsService['solyana_kimnata']['zobrazhennya_livoruch'], 'full')[0];?>"
+                        alt="<?php echo get_post_meta($spsService['solyana_kimnata']['zobrazhennya_livoruch'], '_wp_attachment_image_alt', TRUE);?>"
+                    >
+                  </div>
+                </div>
+                <div class="pic-wrapper right-pic">
+                  <div class="inner">
+                    <img
+
+                        src="<?php echo wp_get_attachment_image_src($spsService['solyana_kimnata']['zobrazhennya_pravoruch'], 'full')[0];?>"
+                        alt="<?php echo get_post_meta($spsService['solyana_kimnata']['zobrazhennya_pravoruch'], '_wp_attachment_image_alt', TRUE);?>"
+                    >
+                  </div>
+                </div>
+              </div>
+            <?php endif;?>
+	          <?php if( $spsService['basejn'] ):?>
+              <div class="service-part basin">
+                <div class="pic-part">
+                  <div class="pic-wrapper">
+                    <div class="inner">
+                      <img
+
+                          src="<?php echo wp_get_attachment_image_src($spsService['basejn']['zobrazhennya_livoruch_verhnye'], 'full')[0];?>"
+                          alt="<?php echo get_post_meta($spsService['basejn']['zobrazhennya_livoruch_verhnye'], '_wp_attachment_image_alt', TRUE);?>"
+                      >
+                    </div>
+                  </div>
+                  <div class="pic-wrapper">
+                    <div class="inner">
+                      <img
+
+                          src="<?php echo wp_get_attachment_image_src($spsService['basejn']['zobrazhennya_livoruch_nyzhnye'], 'full')[0];?>"
+                          alt="<?php echo get_post_meta($spsService['basejn']['zobrazhennya_livoruch_nyzhnye'], '_wp_attachment_image_alt', TRUE);?>"
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="text-content">
+                  <h2 class="headline-title"><?php echo $spsService['basejn']['zagolovok'];?></h2>
+                  <div class="text"><?php echo $spsService['basejn']['tekst_opysu'];?></div>
+                  <div class="pic-wrapper">
+                    <div class="inner">
+                      <img
+
+                          src="<?php echo wp_get_attachment_image_src($spsService['basejn']['zobrazhennya_pravoruch'], 'full')[0];?>"
+                          alt="<?php echo get_post_meta($spsService['basejn']['zobrazhennya_pravoruch'], '_wp_attachment_image_alt', TRUE);?>"
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+	          <?php endif;?>
+
+	          <?php if( $spsService['hamam'] ):?>
+              <div class="service-part hamam">
+                <div class="pic-wrapper">
+                  <div class="inner">
+                    <img
+
+                        src="<?php echo wp_get_attachment_image_src($spsService['hamam']['zobrazhennya'], 'full')[0];?>"
+                        alt="<?php echo get_post_meta($spsService['hamam']['zobrazhennya'], '_wp_attachment_image_alt', TRUE);?>"
+                    >
+                  </div>
+                </div>
+                <div class="text-content">
+                  <h2 class="headline-title"><?php echo $spsService['hamam']['zagolovok'];?></h2>
+                  <div class="text"><?php echo $spsService['hamam']['tekst_opysu'];?></div>
+                </div>
+
+              </div>
+	          <?php endif;?>
+
+	          <?php if( $spsService['sauna'] ):?>
+              <div class="service-part sauna">
+                <div class="text-content">
+                  <h2 class="headline-title"><?php echo $spsService['sauna']['zagolovok'];?></h2>
+                  <div class="text"><?php echo $spsService['sauna']['tekst_opysu'];?></div>
+                  <div class="pic-wrapper">
+                    <div class="inner">
+                      <img
+
+                          src="<?php echo wp_get_attachment_image_src($spsService['sauna']['zobrazhennya_livoruch'], 'full')[0];?>"
+                          alt="<?php echo get_post_meta($spsService['sauna']['zobrazhennya_livoruch'], '_wp_attachment_image_alt', TRUE);?>"
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pic-wrapper right-pic">
+                  <div class="inner">
+                    <img
+
+                        src="<?php echo wp_get_attachment_image_src($spsService['sauna']['zobrazhennya_pravoruch'], 'full')[0];?>"
+                        alt="<?php echo get_post_meta($spsService['sauna']['zobrazhennya_pravoruch'], '_wp_attachment_image_alt', TRUE);?>"
+                    >
+                  </div>
+                </div>
+              </div>
+	          <?php endif;?>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <?php endif;?>
 	<?php endif;?>
 
   <?php if( $blockTrigger == 'other' ):?>

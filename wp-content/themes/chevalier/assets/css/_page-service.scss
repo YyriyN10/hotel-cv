@@ -366,3 +366,373 @@
 
   }
 }
+
+/*--- our-spa ---*/
+
+.our-spa{
+  background: #F3DFCF;
+  padding-top: 130px;
+  position: relative;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  .content{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    flex-direction: unset;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .service-part{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 170px;
+
+    @media(max-width: 1200px){
+      margin-bottom: 150px;
+    }
+
+    @media(max-width: 992px){
+      margin-bottom: 130px;
+    }
+
+    @media(max-width: 767px){
+      margin-bottom: 110px;
+    }
+
+    @media(max-width: 575px){
+      margin-bottom: 90px;
+    }
+
+    @media(max-width: 440px){
+      margin-bottom: 70px;
+    }
+
+    .pic-wrapper{
+      position: relative;
+
+      .inner{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        @media(max-width: 892px){
+          position: relative;
+        }
+
+        img{
+          width: auto;
+          height: 100%;
+          min-width: 100%;
+          min-height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+
+          @media(max-width: 892px){
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .text-content{
+
+      .text{
+        position: relative;
+        padding-top: 24px;
+        font-size: 17px;
+        line-height: 1.7;
+        letter-spacing: 0.72px;
+
+        p{
+          margin-bottom: 0;
+        }
+
+        &:before,
+        &:after{
+          content: '';
+          background: #460000;
+          position: absolute;
+        }
+
+        &:before{
+          width: 100%;
+          height: 2px;
+          left: 0;
+          top: 0;
+        }
+
+        &:after{
+          width: 8px;
+          height: 8px;
+          transform: rotate(45deg);
+          top: -3px;
+          right: 0;
+        }
+      }
+    }
+
+    &.salt-room{
+      align-items: flex-end;
+
+      .text-content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        align-items: flex-start;
+
+        @media(max-width: 892px){
+          flex-wrap: wrap;
+        }
+
+        .headline-title{
+          width: calc(45% - 15px);
+
+          @media(max-width: 892px){
+            width: 100%;
+            margin-bottom: 25px;
+          }
+        }
+
+        .text{
+          width: calc(50% - 15px);
+          padding-right: 100px;
+
+          @media(max-width: 992px){
+            padding-right: 0;
+          }
+
+          @media(max-width: 892px){
+            width: 100%;
+          }
+        }
+      }
+
+      .pic-wrapper{
+        &.left-pic{
+          width: calc(45% - 15px);
+          height: 71vh;
+
+          @media(max-width: 892px){
+            width: calc(50% - 15px);
+            height: auto;
+          }
+
+          @media(max-width: 440px){
+            width: 100%;
+            margin-bottom: 30px;
+          }
+
+          .inner{
+            right: 0;
+            width: 51vw;
+
+            @media(max-width: 892px){
+              width: 100%;
+            }
+          }
+        }
+
+        &.right-pic{
+          width: calc(50% - 15px);
+          height: 58vh;
+
+          @media(max-width: 892px){
+            width: calc(50% - 15px);
+            height: auto;
+          }
+
+          @media(max-width: 440px){
+            width: 100%;
+          }
+
+          .inner{
+            left: 0;
+            width: 50vw;
+
+            @media(max-width: 892px){
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &.basin{
+      .pic-part{
+        width: calc(45% - 15px);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+
+        @media(max-width: 892px){
+          order: 2;
+          width: 100%;
+          gap: 30px;
+        }
+
+        .pic-wrapper{
+          width: 100%;
+          height: 40vh;
+
+          @media(max-width: 892px){
+            height: auto;
+            width: calc(50% - 15px);
+          }
+
+          @media(max-width: 440px){
+            width: 100%;
+          }
+
+          .inner{
+            right: 0;
+            width: 46vw;
+
+            @media(max-width: 892px){
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .text-content{
+        width: calc(50% - 15px);
+
+        @media(max-width: 892px){
+          order: 1;
+          margin-bottom: 30px;
+          width: 100%;
+        }
+
+        .headline-title{
+          margin-bottom: 25px;
+        }
+
+        .text{
+          margin-bottom: 30px;
+        }
+
+        .pic-wrapper{
+          width: 100%;
+          height: 57vh;
+
+          @media(max-width: 892px){
+            height: auto;
+          }
+
+          .inner{
+            left: 0;
+            width: 50vw;
+
+            @media(max-width: 892px){
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &.hamam{
+      align-items: center;
+
+      .pic-wrapper{
+        width: calc(53% - 15px);
+        height: 71vh;
+
+        @media(max-width: 892px){
+          width: 100%;
+          height: auto;
+          order: 2;
+        }
+
+        .inner{
+          right: 0;
+          width: 52vw;
+
+          @media(max-width: 892px){
+            width: 100%;
+          }
+        }
+      }
+
+      .text-content{
+        width: calc(42% - 15px);
+
+        @media(max-width: 892px){
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        .headline-title{
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    &.sauna{
+      align-items: flex-end;
+
+      .text-content{
+        width: calc(45% - 15px);
+
+        @media(max-width: 892px){
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        .headline-title{
+          margin-bottom: 30px;
+        }
+
+        .text{
+          margin-bottom: 65px;
+        }
+
+        .pic-wrapper{
+          width: 100%;
+          height: 54vh;
+
+          @media(max-width: 892px){
+            height: auto;
+          }
+
+          .inner{
+            right: 0;
+            width: 45vw;
+
+            @media(max-width: 892px){
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .right-pic{
+        width: calc(50% - 15px);
+        height: 71vh;
+
+        @media(max-width: 892px){
+          width: 100%;
+          height: auto;
+        }
+
+        .inner{
+          width: 51vw;
+          left: 0;
+
+          @media(max-width: 892px){
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
