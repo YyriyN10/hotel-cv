@@ -18,6 +18,9 @@ $(document).ready(function() {
     $('.fulpage-wrapper').fullpage({
       fitToSection: true,
       verticalCentered: false,
+      scrollBar: true,
+
+
     });
   }
 
