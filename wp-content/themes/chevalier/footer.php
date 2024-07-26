@@ -45,14 +45,14 @@
           <nav class="footer-menu-wrapper">
 		        <?php wp_nav_menu(array('container' => '', 'menu_class' => 'footer-menu', 'theme_location' => 'menu-4', 'menu_id' => 'widget-menu')); ?>
           </nav>
-          <div class="go-list">
+          <!--<div class="go-list">
             <div class="buttons">
-              <a class="button-xl lined whited line-button" href="<?php echo wpm_translate_url(home_url('/room/'), wpm_get_language()); ?>"><?php _e("[:uk]Прокласти маршрут[:ru]Проложить маршрут[:en]Make a route"); ?></a>
+              <a class="button-xl lined whited line-button" href="<?php /*echo wpm_translate_url(home_url('/room/'), wpm_get_language()); */?>"><?php /*_e("[:uk]Прокласти маршрут[:ru]Проложить маршрут[:en]Make a route"); */?></a>
             </div>
             <div class="buttons">
-              <a class="button-xl lined whited line-button" href="<?php echo wpm_translate_url(home_url('/room/'), wpm_get_language()); ?>"><?php _e("[:uk]Забронювати[:ru]Забронировать[:en]Reserve"); ?></a>
+              <a class="button-xl lined whited line-button" href="<?php /*echo wpm_translate_url(home_url('/room/'), wpm_get_language()); */?>"><?php /*_e("[:uk]Забронювати[:ru]Забронировать[:en]Reserve"); */?></a>
             </div>
-          </div>
+          </div>-->
         </div>
 
 			</div>
