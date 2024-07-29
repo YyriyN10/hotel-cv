@@ -25,29 +25,94 @@
     </svg>
     <div class="container">
       <div class="row x-end">
-        <div class="col-lg-8 col-12">
-	        <?php /* Headline */ if (!empty($headline = $section['headline'])) : ?>
-            <div class="headline">
-			        <?php if (!empty($headline_title = $headline['title'])) {
-				        echo '<p class="headline-title">' . $headline_title . '</p>';
-			        } ?>
-			        <?php if (!empty($headline_textarea = $headline['textarea'])) {
-				        echo '<div class="headline-textarea editor">' . $headline_textarea . '</div>';
-			        } ?>
+        <div class="content col-12">
+          <div class="title-media-wrapper">
+	          <?php if (!empty($headline = $section['headline'])) : ?>
+              <div class="headline">
+			          <?php if (!empty($headline_title = $headline['title'])) {
+				          echo '<p class="headline-title">' . $headline_title . '</p>';
+			          } ?>
+			          <?php if (!empty($headline_textarea = $headline['textarea'])) {
+				          echo '<div class="headline-textarea editor">' . $headline_textarea . '</div>';
+			          } ?>
+              </div>
+	          <?php endif; ?>
+            <div class="media-content">
+              <div class="inner">
+		            <?php if (!empty($gallery = $section['gallery'])) : ?>
+                  <div id="hotel-slider" class="swiper">
+                    <div class="swiper-wrapper">
+
+					            <?php foreach ((array) $gallery as $image) : ?>
+                        <div class="swiper-slide">
+                          <img class="announce-media__image" src="<?php echo $image['url']; ?>" />
+                        </div>
+					            <?php  endforeach; ?>
+
+                    </div>
+                  </div>
+
+                  <script>
+                    var swiper = new Swiper("#hotel-slider", {
+                      effect: "fade",
+                      spaceBetween: 0,
+                      autoplay: {
+                        delay: 2000,
+                      },
+                    });
+                  </script>
+		            <?php endif; ?>
+              </div>
             </div>
-	        <?php /* Headline End */ endif; ?>
+          </div>
+          <div class="text-content-wrapper">
+	          <?php if (!empty($blocks = $section['blocks'])) : ?>
+
+		          <?php foreach ((array) $blocks as $block) : ?>
+                <div class="card-box">
+                  <div class="card-box__meta">
+                    <p class="card-box__title"><?php echo $block['title']; ?></p>
+                    <div class="card-box__textarea editor"><?php echo $block['textarea']; ?></div>
+                  </div>
+                </div>
+		          <?php endforeach; ?>
+
+	          <?php endif; ?>
+
+            <div class="buttons">
+              <a class="button- lined whited line-button" href="<?php echo wpm_translate_url(home_url('/hotel/'), wpm_get_language()); ?>"><?php _e("[:uk]Детальніше[:ru]Подробнее[:en]Details"); ?></a>
+              <div class="pic-wrapper">
+                <img
+                    src="<?php echo wp_get_attachment_image_src($section['image_for_button_details'], 'full')[0];?>"
+                    alt="<?php echo get_post_meta($section['image_for_button_details'], '_wp_attachment_image_alt', TRUE);?>"
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-md-8 col-12">
+	        <?php /*if (!empty($headline = $section['headline'])) : */?>
+            <div class="headline">
+			        <?php /*if (!empty($headline_title = $headline['title'])) {
+				        echo '<p class="headline-title">' . $headline_title . '</p>';
+			        } */?>
+			        <?php /*if (!empty($headline_textarea = $headline['textarea'])) {
+				        echo '<div class="headline-textarea editor">' . $headline_textarea . '</div>';
+			        } */?>
+            </div>
+	        <?php /*endif; */?>
           <div class="announce-media boxed">
 
             <div class="inner">
-	            <?php if (!empty($gallery = $section['gallery'])) : ?>
+	            <?php /*if (!empty($gallery = $section['gallery'])) : */?>
                 <div id="hotel-slider" class="swiper">
                   <div class="swiper-wrapper">
 
-				            <?php foreach ((array) $gallery as $image) : ?>
+				            <?php /*foreach ((array) $gallery as $image) : */?>
                       <div class="swiper-slide">
-                        <img class="announce-media__image" src="<?php echo $image['url']; ?>" />
+                        <img class="announce-media__image" src="<?php /*echo $image['url']; */?>" />
                       </div>
-				            <?php  endforeach; ?>
+				            <?php /* endforeach; */?>
 
                   </div>
                 </div>
@@ -61,35 +126,35 @@
                     },
                   });
                 </script>
-	            <?php endif; ?>
+	            <?php /*endif; */?>
             </div>
 
           </div>
-        </div>
-        <div class="col-lg-4 col-12 card-box-wrapper">
-	        <?php /* blocks */ if (!empty($blocks = $section['blocks'])) : ?>
+        </div>-->
+        <!--<div class="col-md-4 col-12 card-box-wrapper">
+	        <?php /*if (!empty($blocks = $section['blocks'])) : */?>
 
-		        <?php foreach ((array) $blocks as $block) : ?>
+		        <?php /*foreach ((array) $blocks as $block) : */?>
               <div class="card-box">
                 <div class="card-box__meta">
-                  <p class="card-box__title"><?php echo $block['title']; ?></p>
-                  <div class="card-box__textarea editor"><?php echo $block['textarea']; ?></div>
+                  <p class="card-box__title"><?php /*echo $block['title']; */?></p>
+                  <div class="card-box__textarea editor"><?php /*echo $block['textarea']; */?></div>
                 </div>
               </div>
-		        <?php endforeach; ?>
+		        <?php /*endforeach; */?>
 
-	        <?php /* blocks end */ endif; ?>
+	        <?php /*endif; */?>
 
           <div class="buttons">
-            <a class="button- lined whited line-button" href="<?php echo wpm_translate_url(home_url('/hotel/'), wpm_get_language()); ?>"><?php _e("[:uk]Детальніше[:ru]Подробнее[:en]Details"); ?></a>
+            <a class="button- lined whited line-button" href="<?php /*echo wpm_translate_url(home_url('/hotel/'), wpm_get_language()); */?>"><?php /*_e("[:uk]Детальніше[:ru]Подробнее[:en]Details"); */?></a>
             <div class="pic-wrapper">
               <img
-                 src="<?php echo wp_get_attachment_image_src($section['image_for_button_details'], 'full')[0];?>"
-                 alt="<?php echo get_post_meta($section['image_for_button_details'], '_wp_attachment_image_alt', TRUE);?>"
+                 src="<?php /*echo wp_get_attachment_image_src($section['image_for_button_details'], 'full')[0];*/?>"
+                 alt="<?php /*echo get_post_meta($section['image_for_button_details'], '_wp_attachment_image_alt', TRUE);*/?>"
               >
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
