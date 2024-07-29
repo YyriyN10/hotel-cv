@@ -17,6 +17,9 @@ get_header(); ?>
   <?php // Template Part: Page Header
   get_template_part('template-parts/content-header'); ?>
 
+  <div id="ServioContainer"></div><div id="ServioResult"></div><script
+      src="https://sbj.rkz.io/servio-booking.js?module_id=65&lang=uk"></script>
+
   <?php /* Section Booking */ if (!empty($section = get_field('section_booking', 'options'))) : if ($section['1']) : ?>
       <section>
 

@@ -92,6 +92,52 @@ $(document).ready(function() {
   }
 
   /**
+   * Leisure modal
+   */
+
+  if ( $('.leisure-item').length ){
+
+    /*let modal = document.getElementById("modal-leisure");*/
+    let modal = $('#modal-leisure');
+
+    let span = $('#modal-leisure .popup-close');
+
+    $('.leisure-item').on('click', function (e) {
+      e.preventDefault();
+
+      const thisLeisure = $(this);
+      let thisTitle = thisLeisure .find('.card-box__title').text();
+      let thisDescription = thisLeisure .attr('data-modal-content');
+      let thisImg = thisLeisure .attr('data-modal-img');
+
+      modal.find('.popup-pic img').attr('src', thisImg);
+      modal.find('.popup-title').text(thisTitle);
+      modal.find('.popup-text').html(thisDescription);
+
+      modal.css({'display' : 'block'});
+    });
+
+    span.on('click', function () {
+      modal.css({'display' : 'none'});
+    })
+
+    $(document).on('keyup', function(event) {
+      if (event.which == 27) { // esc
+        modal.css({'display' : 'none'});
+      };
+    });
+
+    $(window).on('click', function(e) {
+      if(e.target == modal[0]){
+        modal.css({'display' : 'none'});
+      }
+    });
+
+  }
+
+
+
+  /**
    * Room Head Name
    */
 

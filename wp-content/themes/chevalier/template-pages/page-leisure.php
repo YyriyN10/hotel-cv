@@ -29,4 +29,21 @@ get_header(); ?>
 
 </main>
 
+  <div class="popup leisure-popup-wrapper" id="modal-leisure">
+    <div class="popup-content">
+      <a href="#" class="popup-close">
+        <span></span><span></span>
+      </a>
+      <div class="popup-pic">
+        <img
+           src=""
+        >
+      </div>
+      <div class="popup-text-wrapper">
+        <h3 class="popup-title"></h3>
+        <div class="popup-text"></div>
+      </div>
+    </div>
+  </div>
+
 <?php get_footer(); ?>
