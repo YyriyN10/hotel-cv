@@ -15,17 +15,35 @@ $(document).ready(function() {
   });
 
   if ($('.fulpage-wrapper').length){
-    $('.fulpage-wrapper').fullpage({
-      fitToSection: true,
+
+    const roomsList = new Swiper("#all-rooms", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      autoHeight: true,
+    });
+
+    /*$('.fulpage-wrapper').pagepiling({
+      menu: null,
+      direction: 'vertical',
+      verticalCentered: false,
+      normalScrollElements: '.site-footer'
+    });
+*/
+
+    /*$('.fulpage-wrapper').fullpage({
+      /!*fitToSection: true,*!/
       verticalCentered: false,
       scrollBar: true,
 
 
-    });
+    });*/
   }
 
   $('#menu-btn').on('click', function () {
     $('#hidden-menu').toggleClass('active');
+    $('.headbar').toggleClass('active');
   })
 
   $(".custom-menu .menu .main-menu-item").hover(function(){
@@ -39,10 +57,98 @@ $(document).ready(function() {
     $('.elements-wrapper .menu-pic img').attr('src', imageSrc);
   });
 
+  /**
+   * Home Room Slider
+   */
+
+  if ( $('#home-room-slider').length ){
+
+    $('#home-room-slider').slick({
+       autoplay: true,
+       autoplaySpeed: 1000,
+       slidesToShow: 1,
+       slidesToScroll: 1,
+       arrows: false,
+        centerMode: true,
+      centerPadding: '25%',
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            centerPadding: '15%',
+          }
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            centerPadding: '5%',
+          }
+        },
+        {
+          breakpoint: 440,
+          settings: {
+            centerPadding: '0',
+            centerMode: false,
+            fade: true
+          }
+        }
+
+      ]
+
+   });
+ }
 
   /**
-   * Home Services
+   * Home Reviews Slider
    */
+
+  if ( $('#home-review-slider').length ){
+
+    $('#home-review-slider').slick({
+      autoplay: false,
+      autoplaySpeed: 5000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '15%',
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            centerPadding: '10%',
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            centerPadding: '0',
+            centerMode: false,
+            fade: true
+          }
+        }
+
+      ]
+
+    });
+
+    $('.reviews-wrapper .swiper-button__prev').click(function(e){
+      e.preventDefault();
+
+      $('#home-review-slider').slick('slickPrev');
+    });
+
+    $('.reviews-wrapper .swiper-button__next').click(function(e){
+      e.preventDefault();
+
+      $('#home-review-slider').slick('slickNext');
+    });
+  }
+
+ /**
+  * Home Services
+  */
 
   if ( $('.our-services').length ){
 
@@ -135,6 +241,32 @@ $(document).ready(function() {
 
   }
 
+  //Animation
+
+  let animationTracking = $('.animation-tracking');
+
+  console.log(animationTracking)
+
+  animationTracking.each(function () {
+
+    let thisTrack = $(this);
+
+    thisTrack.viewportChecker({
+
+      offset: 300,
+
+      callbackFunction: function (elem, action) {
+
+        $('.visible .first-up').addClass('animate');
+
+        setTimeout(function () {
+          $('.visible .second-up').addClass('animate');
+        }, 500);
+
+      }
+    });
+  })
+
 
 
   /**
@@ -154,4 +286,19 @@ $(document).ready(function() {
 
 });
 
+
+
+
+
+
+/*
+let images = document.querySelectorAll('.parallax-image');
+
+console.log(100);
+
+
+new simpleParallax(images,{
+  scale: 1.7
+});
+*/
 

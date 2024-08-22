@@ -2,6 +2,28 @@
 /*--- fulpage-wrapper ---*/
 .fulpage-wrapper{
 
+  .all-rooms-wrapper{
+    height: 100vh;
+    //height: auto;
+    .all-rooms{
+
+      .swiper-slide{
+
+        &.room{
+          height: 100vh !important;
+        }
+
+        &.end-slide{
+          height: 100vh !important;
+          background: #1e0808;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+    }
+  }
+
   .room-item{
     position: relative;
     padding: 0;

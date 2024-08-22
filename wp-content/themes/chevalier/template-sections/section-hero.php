@@ -29,7 +29,7 @@
 
         <?php /* slides */ foreach ((array) $gallery as $image) : ?>
           <div class="swiper-slide">
-            <img class="announce-media__image" src="<?php echo $image['url']; ?>" />
+            <img class="announce-media__image parallax-image" src="<?php echo $image['url']; ?>" />
           </div>
         <?php /* slides end */ endforeach; ?>
       </div>
@@ -49,11 +49,20 @@
   <?php else : ?>
 
     <?php /* image */ if (!empty($image = get_the_post_thumbnail_url())) : ?>
-      <img class="hero-media__image" src="<?php echo $image; ?>" />
+      <img class="hero-media__image parallax-image" src="<?php echo $image; ?>" />
     <?php /* image end */ endif; ?>
 
   <?php /* hero media end */ endif; ?>
 
 </div>
+
+  <!--<script>
+    const images = document.querySelectorAll('.parallax-image');
+    new simpleParallax(images,{
+      delay: 1,
+      scale: 1.5,
+      transition: 'cubic-bezier(0,0,0,1)'
+    });
+  </script>-->
 
 <?php /* Section Hero end */ ?>

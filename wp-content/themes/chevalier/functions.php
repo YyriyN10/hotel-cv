@@ -122,7 +122,8 @@ function chevalier_scripts()
 	// Style
 	wp_enqueue_style('chevalier-style', get_theme_file_uri('/style.css'), array(), '1.0.0');
 	wp_enqueue_style('chevalier-normalize', get_theme_file_uri('/assets/css/normalize.css'), array(), '8.0.1');
-	wp_enqueue_style('chevalier-fullpage', get_theme_file_uri('/assets/css/fullpage.css'), array(), '1.0.0');
+	/*wp_enqueue_style('chevalier-fullpage', get_theme_file_uri('/assets/css/fullpage.css'), array(), '1.0.0');*/
+	/*wp_enqueue_style('chevalier-pagepiling', get_theme_file_uri('/assets/css/jquery.pagepiling.css'), array(), '1.0.0');*/
 	wp_enqueue_style('chevalier-custom-style', get_theme_file_uri('/assets/css/custom-styles.min.css'), array(), '1.0.0');
 
 	// jQuery
@@ -135,6 +136,9 @@ function chevalier_scripts()
 	// Swiper
 	wp_enqueue_style('chevalier-swiper', get_theme_file_uri('/assets/css/swiper-bundle.min.css'), array(), '6.5.0');
 	wp_enqueue_script('chevalier-swiper', get_theme_file_uri('/assets/js/swiper-bundle.min.js'), array(), '6.5.0');
+
+	wp_enqueue_script('chevalier-parallax', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js', array(), '5.6.1');
+
 
 	// Fancy Box
 	wp_enqueue_style('chevalier-fancybox', get_theme_file_uri('/assets/css/fancybox.min.css'), array(), '3.5.7');

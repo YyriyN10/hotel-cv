@@ -5,6 +5,10 @@
   position: relative;
   cursor: pointer;
 
+  @media(max-width: 440px){
+    padding: 0;
+  }
+
   .card-box__thumbnail{
     position: relative;
 
@@ -29,9 +33,36 @@
       transition: all 0.2s;
       opacity: 0;
     }
-    img{
+
+    .simpleParallax{
+      width: 100%;
+      height: 100%;
       position: relative;
       z-index: 1;
+    }
+
+    img{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+  }
+
+  .card-box__title{
+    color: #1D1D1D;
+    font-family: $f-inter-med;
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: -1.44px;
+
+    @media(max-width: 1200px){
+      font-size: 32px;
+    }
+
+    @media(max-width: 767px){
+      font-size: 28px;
     }
   }
 

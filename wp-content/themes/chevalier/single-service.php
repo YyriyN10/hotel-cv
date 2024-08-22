@@ -33,7 +33,7 @@ get_header(); ?>
 				if ( $barLobster['zagolovok'] && $barLobster['korotkyj_opys_baru'] && $barLobster['verhnye_zobrazhennya']):
 					?>
 
-      <section class="bar-lobster">
+      <section class="bar-lobster animation-tracking">
         <svg class="bg-pic" width="1920" height="1876" viewBox="0 0 1920 1876" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M591.404 189.438C600.879 183.898 605.849 184.442 617.886 174.217C629.924 163.992 640.589 157.08 650.685 147.139C660.754 137.199 666.139 127.673 672.326 131.4C678.513 135.128 683.638 144.447 683.638 144.447L705.745 182.501V185.659L689.048 166.399C689.048 166.399 695.209 181.439 699.74 187.471C704.244 193.476 712.683 204.012 712.683 204.012C712.683 204.012 696.892 196.117 692.828 189.464C688.764 182.811 683.198 176.935 683.198 176.935C683.198 176.935 687.883 188.972 690.42 191.82L685.062 190.422C685.062 190.422 688.945 195.211 689.411 198.214C677.736 198.032 669.996 202.097 669.996 202.097C669.996 202.097 685.14 201.165 702.121 208.672C719.129 216.205 741.986 229.588 752.522 243.878C744.86 229.433 732.357 212.141 732.357 212.141C732.357 212.141 745.455 221.46 751.15 232.902C756.871 244.344 767.096 268.392 767.096 268.392L764.378 248.848L774.604 260.885C774.604 260.885 776.571 273.207 781.515 280.3C786.46 287.393 799.713 294.279 803.467 300.155C807.221 306.031 811 312.632 811 312.632C811 312.632 799.558 296.531 790.705 295.78C781.826 295.029 775.665 285.555 773.102 281.18C770.539 276.805 756.561 265.674 756.561 265.674L770.099 284.468C770.099 284.468 734.894 257.235 724.358 254.828C736.24 263.862 747.215 284.312 747.215 284.312C747.215 284.312 718.041 260.704 709.758 255.734C701.474 250.763 688.401 245.664 682.525 245.793C676.649 245.948 664.482 232.255 664.482 232.255C664.482 232.255 679.211 240.823 691.87 241.134C704.529 241.444 710.664 240.978 710.664 240.978C710.664 240.978 687.34 231.504 679.677 231.504C672.015 231.504 659.667 219.311 652.445 217.37C645.222 215.402 639.967 210.458 635.593 210.458C631.218 210.458 624.021 192.7 624.021 192.7C624.021 192.7 632.59 204.142 635.748 205.643C638.906 207.145 646.103 210.536 647.785 209.863C648.355 209.63 649.131 203.598 648.976 201.501C648.795 199.404 643.721 196.479 643.721 196.479C643.721 196.479 648.847 198.576 652.678 199.068C656.509 199.586 659.9 198.887 659.9 198.887C659.9 198.887 652.626 197.204 650.995 195.496C649.364 193.813 643.773 191.147 643.773 191.147C643.773 191.147 653.972 192.389 658.554 188.17C663.11 183.95 669.944 175.485 678.849 175.019C671.808 173.155 659.279 179.472 657.182 179.42C663.938 175.071 667.796 173.259 667.614 168.185C667.433 163.112 668.624 159.487 671.497 155.993C674.371 152.498 673.309 147.088 673.309 147.088L665.31 158.53C665.31 158.53 668.08 149.21 669.711 146.337C671.342 143.464 669.09 141.574 672.248 139.632C672.973 139.192 673.206 136.241 668.909 138.105C664.611 139.969 645.507 158.348 632.642 167.538C619.776 176.702 606.082 187.471 591.353 189.386L591.404 189.438Z" fill="black" fill-opacity="0.04"/>
           <path d="M606.289 140.59L624.798 146.337C624.798 146.337 611.155 140.021 604.839 132.125C598.523 124.23 596.84 119.027 594.225 113.176C591.637 107.3 583.172 100.311 583.172 100.311C583.172 100.311 587.003 115.092 589.592 117.81C580.79 110.691 577.632 96.8158 573.335 89.0499C569.038 81.258 565.543 68.5477 565.543 68.5477L549.985 49.1846L535.541 57.0282C535.541 57.0282 526.972 70.7222 526.791 71.1623C526.61 71.5764 522.856 85.607 517.446 89.9041C512.062 94.2013 508.8 98.4208 508.8 98.4208C520.759 97.7478 525.73 92.0009 530.803 83.0701C535.877 74.1651 539.838 65.5708 546.827 62.542C540.847 70.9034 545.248 81.258 545.248 81.258C545.248 81.258 546.258 74.7087 554.826 71.5506C550.762 78.8765 548.613 79.446 548.613 84.8563C548.613 90.2665 549.623 91.5091 547.811 90.7325C545.999 89.93 536.654 83.0701 536.654 83.0701C536.654 83.0701 545.792 95.3662 552.91 100.776C560.029 106.187 573.568 123.35 573.568 123.35L554.49 110.044C554.49 110.044 561.608 121.201 567.925 127.31C574.241 133.394 589.255 145.483 589.255 145.483C589.255 145.483 569.4 138.597 562.851 133.419C556.302 128.242 565.336 147.062 565.336 147.062C565.336 147.062 549.778 144.577 545.585 141.884C541.417 139.166 534.531 132.41 534.531 132.41C534.531 132.41 542.193 145.146 545.688 146.389C549.183 147.631 554.257 148.641 561.246 151.566C568.235 154.491 588.893 159.228 603.674 158.322C592.853 164.535 573.206 162.956 573.206 162.956C573.206 162.956 587.987 165.208 589.462 166.011C590.938 166.787 596.115 171.99 597.358 172.43C598.6 172.871 607.065 164.535 607.065 164.535C607.065 164.535 603.57 177.271 598.833 179.886C610.456 174.01 611.932 160.031 617.213 158.555C622.519 157.08 628.163 156.303 632.667 154.155C623.866 154.388 606.263 140.616 606.263 140.616L606.289 140.59ZM565.569 90.836C564.792 87.2378 560.159 81.025 560.159 81.025C568.158 82.7077 567.718 85.7623 565.569 90.836ZM591.067 140.486C588.349 137.432 581.36 128.967 579.677 119.156C579.677 119.156 585.087 125.576 591.067 132.928C597.047 140.253 607.764 149.184 607.764 149.184C607.764 149.184 593.785 143.541 591.067 140.486Z" fill="black" fill-opacity="0.04"/>
@@ -64,18 +64,18 @@ get_header(); ?>
           </defs>
         </svg>
 
-        <div class="container">
+        <div class="container first-up">
           <div class="row">
             <div class="content col-12">
-              <div class="top-part">
-                <div class="text-content">
+              <div class="top-part ">
+                <div class="text-content ">
                   <h2 class="headline-title"><?php echo $barLobster['zagolovok'];?></h2>
                   <div class="text"><?php echo $barLobster['korotkyj_opys_baru'];?></div>
                 </div>
-                <div class="pic-wrapper">
+                <div class="pic-wrapper ">
                   <div class="inner">
                     <img
-
+                        class="parallax-image"
                         src="<?php echo wp_get_attachment_image_src($barLobster['verhnye_zobrazhennya'], 'full')[0];?>"
                         alt="<?php echo get_post_meta($barLobster['verhnye_zobrazhennya'], '_wp_attachment_image_alt', TRUE);?>"
                     >
@@ -85,10 +85,10 @@ get_header(); ?>
 							<?php if( $barLobster['perelik_perevag_baru'] && $barLobster['nyzhnye_zobrazhennya']):?>
 							<?php endif;?>
               <div class="bottom-part">
-                <div class="pic-wrapper">
+                <div class="pic-wrapper ">
                   <div class="inner">
                     <img
-
+                        class="parallax-image"
                         src="<?php echo wp_get_attachment_image_src($barLobster['nyzhnye_zobrazhennya'], 'full')[0];?>"
                         alt="<?php echo get_post_meta($barLobster['nyzhnye_zobrazhennya'], '_wp_attachment_image_alt', TRUE);?>"
                     >
@@ -102,12 +102,18 @@ get_header(); ?>
                 </div>
               </div>
 							<?php if( $barLobster['zgolovok_slajderu'] ):?>
-                <p class="slider-title"><?php echo $barLobster['zgolovok_slajderu'];?></p>
+                <p class="slider-title "><?php echo $barLobster['zgolovok_slajderu'];?></p>
 							<?php endif;?>
             </div>
           </div>
         </div>
       </section>
+          <section id="<?php echo get_post_type(), '-', get_the_ID(); ?>" class="announce service-call-line animation-tracking">
+
+						<?php
+							get_template_part('template-sections/section-media-announce'); ?>
+
+          </section>
 		<?php endif;?>
     <?php elseif ( $blockTrigger == 'spa' ):?>
 
@@ -121,24 +127,24 @@ get_header(); ?>
         <div class="row">
           <div class="content col-12">
             <?php if( $spsService['solyana_kimnata'] ):?>
-              <div class="service-part salt-room">
-                <div class="text-content">
+              <div class="service-part salt-room animation-tracking">
+                <div class="text-content first-up">
                   <h2 class="headline-title"><?php echo $spsService['solyana_kimnata']['zagolovok'];?></h2>
                   <div class="text"><?php echo $spsService['solyana_kimnata']['tekst_opysu'];?></div>
                 </div>
-                <div class="pic-wrapper left-pic">
+                <div class="pic-wrapper left-pic first-up">
                   <div class="inner">
                     <img
-
+                        class="parallax-image"
                         src="<?php echo wp_get_attachment_image_src($spsService['solyana_kimnata']['zobrazhennya_livoruch'], 'full')[0];?>"
                         alt="<?php echo get_post_meta($spsService['solyana_kimnata']['zobrazhennya_livoruch'], '_wp_attachment_image_alt', TRUE);?>"
                     >
                   </div>
                 </div>
-                <div class="pic-wrapper right-pic">
+                <div class="pic-wrapper right-pic first-up">
                   <div class="inner">
                     <img
-
+                        class="parallax-image"
                         src="<?php echo wp_get_attachment_image_src($spsService['solyana_kimnata']['zobrazhennya_pravoruch'], 'full')[0];?>"
                         alt="<?php echo get_post_meta($spsService['solyana_kimnata']['zobrazhennya_pravoruch'], '_wp_attachment_image_alt', TRUE);?>"
                     >
@@ -147,12 +153,12 @@ get_header(); ?>
               </div>
             <?php endif;?>
 	          <?php if( $spsService['basejn'] ):?>
-              <div class="service-part basin">
-                <div class="pic-part">
+              <div class="service-part basin animation-tracking">
+                <div class="pic-part first-up">
                   <div class="pic-wrapper">
                     <div class="inner">
                       <img
-
+                          class="parallax-image"
                           src="<?php echo wp_get_attachment_image_src($spsService['basejn']['zobrazhennya_livoruch_verhnye'], 'full')[0];?>"
                           alt="<?php echo get_post_meta($spsService['basejn']['zobrazhennya_livoruch_verhnye'], '_wp_attachment_image_alt', TRUE);?>"
                       >
@@ -161,20 +167,20 @@ get_header(); ?>
                   <div class="pic-wrapper">
                     <div class="inner">
                       <img
-
+                          class="parallax-image"
                           src="<?php echo wp_get_attachment_image_src($spsService['basejn']['zobrazhennya_livoruch_nyzhnye'], 'full')[0];?>"
                           alt="<?php echo get_post_meta($spsService['basejn']['zobrazhennya_livoruch_nyzhnye'], '_wp_attachment_image_alt', TRUE);?>"
                       >
                     </div>
                   </div>
                 </div>
-                <div class="text-content">
+                <div class="text-content first-up">
                   <h2 class="headline-title"><?php echo $spsService['basejn']['zagolovok'];?></h2>
                   <div class="text"><?php echo $spsService['basejn']['tekst_opysu'];?></div>
                   <div class="pic-wrapper">
                     <div class="inner">
                       <img
-
+                          class="parallax-image"
                           src="<?php echo wp_get_attachment_image_src($spsService['basejn']['zobrazhennya_pravoruch'], 'full')[0];?>"
                           alt="<?php echo get_post_meta($spsService['basejn']['zobrazhennya_pravoruch'], '_wp_attachment_image_alt', TRUE);?>"
                       >
@@ -185,17 +191,17 @@ get_header(); ?>
 	          <?php endif;?>
 
 	          <?php if( $spsService['hamam'] ):?>
-              <div class="service-part hamam">
-                <div class="pic-wrapper">
+              <div class="service-part hamam animation-tracking">
+                <div class="pic-wrapper first-up">
                   <div class="inner">
                     <img
-
+                        class="parallax-image"
                         src="<?php echo wp_get_attachment_image_src($spsService['hamam']['zobrazhennya'], 'full')[0];?>"
                         alt="<?php echo get_post_meta($spsService['hamam']['zobrazhennya'], '_wp_attachment_image_alt', TRUE);?>"
                     >
                   </div>
                 </div>
-                <div class="text-content">
+                <div class="text-content first-up">
                   <h2 class="headline-title"><?php echo $spsService['hamam']['zagolovok'];?></h2>
                   <div class="text"><?php echo $spsService['hamam']['tekst_opysu'];?></div>
                 </div>
@@ -204,14 +210,14 @@ get_header(); ?>
 	          <?php endif;?>
 
 	          <?php if( $spsService['sauna'] ):?>
-              <div class="service-part sauna">
-                <div class="text-content">
+              <div class="service-part sauna animation-tracking">
+                <div class="text-content first-up">
                   <h2 class="headline-title"><?php echo $spsService['sauna']['zagolovok'];?></h2>
                   <div class="text"><?php echo $spsService['sauna']['tekst_opysu'];?></div>
                   <div class="pic-wrapper">
                     <div class="inner">
                       <img
-
+                          class="parallax-image"
                           src="<?php echo wp_get_attachment_image_src($spsService['sauna']['zobrazhennya_livoruch'], 'full')[0];?>"
                           alt="<?php echo get_post_meta($spsService['sauna']['zobrazhennya_livoruch'], '_wp_attachment_image_alt', TRUE);?>"
                       >
@@ -219,10 +225,10 @@ get_header(); ?>
                   </div>
                 </div>
 
-                <div class="pic-wrapper right-pic">
+                <div class="pic-wrapper right-pic first-up">
                   <div class="inner">
                     <img
-
+                        class="parallax-image"
                         src="<?php echo wp_get_attachment_image_src($spsService['sauna']['zobrazhennya_pravoruch'], 'full')[0];?>"
                         alt="<?php echo get_post_meta($spsService['sauna']['zobrazhennya_pravoruch'], '_wp_attachment_image_alt', TRUE);?>"
                     >
@@ -239,13 +245,15 @@ get_header(); ?>
 	<?php endif;?>
 
   <?php if( $blockTrigger == 'other' ):?>
-    <section id="<?php echo get_post_type(), '-', get_the_ID(); ?>" class="announce service-call-line">
+    <section id="<?php echo get_post_type(), '-', get_the_ID(); ?>" class="announce service-call-line animation-tracking">
 
-		  <?php // Section: Media Announce
+		  <?php
 			  get_template_part('template-sections/section-media-announce'); ?>
 
     </section>
   <?php endif;?>
+
+
 
 
 </main>

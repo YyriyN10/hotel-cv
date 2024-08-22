@@ -177,3 +177,14 @@ const AccordionNavigation = (() => {
 
 // Use AccordionNavigation component
 AccordionNavigation.init(".sidebar-navigation .menu-item-has-children");
+
+
+//Parallax
+
+const images = document.querySelectorAll('.parallax-image');
+new simpleParallax(images,{
+  delay: 2,
+  scale: 1.2,
+  maxTransition: 55,
+  transition: 'cubic-bezier(0,0,0,1)'
+});

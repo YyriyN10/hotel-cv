@@ -1,6 +1,6 @@
 <?php /* Section Service Selected */ if (!empty($section = get_field('section_service_selected', 'options'))) : ?>
 
-  <div class="content" style="background-image: url('<?php echo $section['headline']['fionove_zobrazhennya'];?>')">
+  <div class="content first-up">
     <div class="top-content">
       <div class="container">
 
@@ -41,6 +41,14 @@
       </div>
     </div>
 
+	  <?php if( $section['headline']['fionove_zobrazhennya'] ):?>
+      <div class="pic-container">
+        <img
+            class="parallax-image"
+            src="<?php echo $section['headline']['fionove_zobrazhennya'];?>"
+        >
+      </div>
+	  <?php endif;?>
   </div>
 
   <!--<div class="announce-media">

@@ -21,7 +21,8 @@ function scripts(){
   return src([//файли які потрібно об'єднати та зжати
    /* 'js/bootstrap.js',
     'js/jquery.lazy.js',*/
-    'js/fullpage.min.js',
+    'js/jquery.viewportchecker.js',
+    'js/slick.min.js',
     'js/js.js'//завжди останній, важлива послідовність
   ])
     .pipe(concat('main.min.js'))//ім'я згенерованого файлу

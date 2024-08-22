@@ -1,6 +1,6 @@
 <?php /* Section Room Slider */ if (!empty($section = get_field('section_room_slider', 'options'))) : ?>
 
-  <div class="container">
+  <div class="container first-up">
 
     <div class="row top-content">
       <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
@@ -31,25 +31,40 @@
 
   <div class="slider home-room-slider">
 
-    <div id="room-slider" class="swiper" style="padding: 0 512px;">
+    <div id="home-room-slider" >
+	    <?php foreach ($posts = get_posts(array('numberposts' => -1, 'post_type' => 'room')) as $post) : setup_postdata($post); ?>
+        <div class="slide">
+
+          <div class="room-box">
+
+				    <?php
+					    get_template_part('template-components/component-room-box'); ?>
+
+          </div>
+
+        </div>
+	    <?php endforeach;
+		    wp_reset_postdata(); ?>
+    </div>
+    <!--<div id="room-slider" class="swiper" style="padding: 0 512px;">
       <div class="swiper-wrapper">
 
-        <?php /* room */ foreach ($posts = get_posts(array('numberposts' => -1, 'post_type' => 'room')) as $post) : setup_postdata($post); ?>
+        <?php /*foreach ($posts = get_posts(array('numberposts' => -1, 'post_type' => 'room')) as $post) : setup_postdata($post); */?>
           <div class="swiper-slide">
 
             <div class="room-box">
 
-              <?php // Componen: Romo Box
-              get_template_part('template-components/component-room-box'); ?>
+              <?php /*
+              get_template_part('template-components/component-room-box'); */?>
 
             </div>
 
           </div>
-        <?php /* room end */ endforeach;
-        wp_reset_postdata(); ?>
+        <?php /*endforeach;
+        wp_reset_postdata(); */?>
 
       </div>
-    </div>
+    </div>-->
 
     <!--<div class="container">
       <div class="row">
@@ -65,16 +80,16 @@
 
     <script>
       var swiper = new Swiper("#room-slider", {
-        initialSlide: 1,
-        /*pagination: {
-          clickable: true,
-          el: "#room-slider__control .swiper-pagination",
+        spaceBetween: 1,
+        slidesPerView: 3,
+        centeredSlides: true,
+        roundLengths: true,
+        loop: true,
+        loopAdditionalSlides: 30,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
         },
-        navigation: {
-          nextEl: "#room-slider__control .swiper-button__next",
-          prevEl: "#room-slider__control .swiper-button__prev",
-        },*/
-        spaceBetween: 32,
       });
     </script>
 

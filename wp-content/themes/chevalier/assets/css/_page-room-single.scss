@@ -1,6 +1,12 @@
 
 .single-room{
 
+  #hero{
+    .main-header{
+      display: block;
+    }
+  }
+
   .room-description-item{
     padding-top: 120px;
     position: relative;
@@ -61,6 +67,11 @@
       align-items: flex-end;
 
       .inner{
+
+        .simpleParallax{
+          width: 100%;
+          height: 100%;
+        }
 
         img{
           height: 100%;
@@ -508,6 +519,14 @@
           width: 100%;
         }
       }
+    }
+  }
+
+  /*--- announce ---*/
+
+  .announce{
+    .announce-content{
+      display: none;
     }
   }
 }
