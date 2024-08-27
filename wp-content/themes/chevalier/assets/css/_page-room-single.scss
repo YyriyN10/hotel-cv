@@ -339,6 +339,7 @@
   .room-meta{
     padding-top: 120px;
     background: #e3d0c2;
+    position: relative;
 
     @media(max-width: 1200px){
       padding-top: 100px;
@@ -352,6 +353,16 @@
       padding-top: 60px;
     }
 
+    .bg-pic{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+
     .content{
       padding: 0;
       width: 100%;
@@ -361,6 +372,8 @@
       justify-content: center;
       gap: 0;
       row-gap: 77px;
+      position: relative;
+      z-index: 2;
 
       .brand-box{
         width: 20%;

@@ -50,12 +50,25 @@
 
 							<div class="headbar-panel">
 
-								<div class="sidebar-toggle" id="menu-btn" data-text="<?php _e("[:uk]Меню[:ru]Меню[:en]Menu"); ?>">
+								<!--<div class="sidebar-toggle" id="menu-btn" data-text="<?php /*_e("[:uk]Меню[:ru]Меню[:en]Menu"); */?>">
+
 									<span></span>
 									<span></span>
 									<span></span>
 									<span></span>
-								</div>
+								</div>-->
+
+                <div class="menu-btn" id="menu-btn">
+                  <div class="menu-btn-inner">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <p class="menu-name"><?php _e("[:uk]Меню[:ru]Меню[:en]Menu"); ?></p>
+                </div>
+
+
 
 							</div>
 

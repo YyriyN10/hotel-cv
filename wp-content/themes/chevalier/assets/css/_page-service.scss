@@ -457,6 +457,14 @@
 
     .text-content{
 
+      .headline-title{
+        margin-top: -30px;
+
+        @media(max-width: 882px){
+          margin-top: 0;
+        }
+      }
+
       .text{
         position: relative;
         padding-top: 24px;

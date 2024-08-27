@@ -19,7 +19,83 @@
     }
   }
 
+  .menu-btn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .menu-btn-inner{
+      width: 19px;
+      margin-right: 18px;
+
+      span{
+        height: 1px;
+        background: #ffffff;
+        display: block;
+        transition: all 0.2s;
+
+        &:nth-child(1){
+          width: 100%;
+          margin-bottom: 3px;
+
+        }
+        &:nth-child(2){
+          width: 14px;
+          margin-bottom: 3px;
+        }
+        &:nth-child(3){
+          width: 100%;
+
+        }
+      }
+    }
+
+    .menu-name{
+      margin: 0;
+      color: #FFF;
+      font-family: $f-inter-reg;
+      font-size: 16px;
+      line-height: 0.98;
+      letter-spacing: -0.56px;
+      text-transform: capitalize;
+    }
+
+    &.open{
+      .menu-btn-inner{
+        span{
+          &:nth-child(1){
+            transform: rotate(45deg) translateY(6px);
+          }
+          &:nth-child(2){
+            opacity: 0;
+          }
+          &:nth-child(3){
+            transform: rotate(-45deg) translateY(-6px);
+          }
+        }
+
+      }
+    }
+  }
+
   .sidebar-toggle{
+    padding-right: 64px;
+
+
+    &:before{
+      left: auto;
+      right: 0;
+    }
+
+    span{
+      width: 19px;
+
+      &:nth-child(2){
+        width: 14px;
+      }
+
+    }
+
     @media(max-width: 575px){
       &:before{
         display: none;
@@ -117,10 +193,21 @@
           }
 
           &.menu-pic{
+            overflow: hidden;
+
             img{
               width: 100%;
               height: 100%;
               object-fit: cover;
+              transition: all 0.45s;
+              opacity: 0;
+              transform: translateY(95%);
+              display: block;
+
+              &.active {
+                opacity: 1;
+                transform: translateY(0);
+              }
             }
           }
         }
@@ -164,7 +251,7 @@
           .sub-menu{
             position: absolute;
             display: none;
-            top: 0;
+            top: 15px;
             left: 450px;
             padding: 0;
             background-color: rgba(0,0,0,0);
@@ -197,6 +284,12 @@
                 letter-spacing: -1.12px;
                 color: #ffffff;
                 font-family: $f-corm-med;
+                opacity: 0.7;
+                transition: all 0.2s;
+
+                &:hover{
+                  opacity: 1;
+                }
 
                 @media(max-width: 1440px){
                   font-size: 28px;
@@ -208,6 +301,7 @@
                   letter-spacing: -0.49px;
                   text-transform: capitalize;
                   font-family: $f-mont-reg;
+                  opacity: 1;
                 }
 
                 &:before{
@@ -246,7 +340,7 @@
               left: 0;
               top: 50%;
               transition: all 0.2s;
-              transform: translateX(-50%) rotate(45deg);
+              transform: translateY(-50%) rotate(45deg);
               width: 21px;
               height: 21px;
               background: #ffffff;
@@ -254,10 +348,11 @@
 
               @media(max-width: 1080px){
                 opacity: 1;
+                left: 15px;
                 width: 1.2px;
                 height: 34px;
-                top: auto;
-                transform: translateX(-50%) rotate(20deg);
+                top: 50%;
+                transform: translatX(-50%) translateY(0) rotate(20deg);
               }
             }
           }
@@ -296,8 +391,8 @@
   &__name{
     font-size: 24px;
     line-height: 0.98;
-    margin-bottom: 0;
-    font-family: $f-mont-reg;
+    margin-bottom: 16px;
+    font-family: $f-mont-light;
 
     @media(max-width: 1080px){
       font-size: 20px;
@@ -313,7 +408,7 @@
       font-size: 20px;
       margin-bottom: 0;
       line-height: 0.98;
-      font-family: $f-mont-reg;
+      font-family: $f-mont-light;
 
       @media(max-width: 767px){
         font-size: 18px;
@@ -418,7 +513,7 @@
               left: 0;
               top: 50%;
               transition: all 0.2s;
-              transform: translateX(-50%) rotate(45deg);
+              transform: translateY(-50%) rotate(45deg);
               width: 21px;
               height: 21px;
               background: #ffffff;

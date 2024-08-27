@@ -29,7 +29,7 @@
       left: 50%;
       width: 109px;
       height: auto;
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(150%);
       transition: all 0.2s;
       opacity: 0;
     }
@@ -74,6 +74,7 @@
 
       .arrow{
         opacity: 1;
+        transform: translateX(-50%) translateY(-50%);
       }
     }
   }

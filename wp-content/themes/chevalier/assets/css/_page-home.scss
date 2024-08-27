@@ -376,9 +376,10 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translateY(-50%) translateX(-50%);
+          transform: translateY(350%) translateX(-50%);
           width: 116px;
           z-index: 3;
+          transition: all 0.2s;
 
           @media(max-width: 1200px){
             width: 90px;
@@ -387,6 +388,12 @@
           svg{
             width: 100%;
             height: auto;
+          }
+        }
+
+        &:hover{
+          .go-to-room{
+            transform: translateY(-50%) translateX(-50%);
           }
         }
       }
