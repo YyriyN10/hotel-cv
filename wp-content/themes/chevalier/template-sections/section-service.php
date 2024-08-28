@@ -34,12 +34,12 @@
             </div>
 	        <?php /* Headline End */ endif; ?>
 
-          <div class="secondary-pic-wrapper">
+          <div class="secondary-pic-wrapper active">
             <img class="parallax-image" src="" alt="">
           </div>
         </div>
         <div class="col-12 service-content">
-          <div class="first-pic-wrapper">
+          <div class="first-pic-wrapper active">
             <div class="inner">
               <img class="parallax-image" src="" alt="">
             </div>

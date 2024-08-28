@@ -137,7 +137,7 @@ function sidebar(e) {
 }
 
 // Add click event listener to .sidebar-toggle element
-document.querySelector(".sidebar-toggle").addEventListener("click", sidebar);
+/*document.querySelector(".sidebar-toggle").addEventListener("click", sidebar);*/
 
 // Self-invoking function for accordion navigation
 const AccordionNavigation = (() => {

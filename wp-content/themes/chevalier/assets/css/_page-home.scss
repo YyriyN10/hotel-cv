@@ -431,16 +431,23 @@
 
   .home-spa{
     background-image: none;
-    min-height: 90vh !important;
+    min-height: 100vh !important;
+    position: relative;
 
     .pic-container{
       position: absolute;
       inset: 0;
       z-index: 1;
 
+      .simpleParallax{
+        width: 100%;
+        height: 100%;
+      }
+
       .parallax-image{
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
 
       img{
@@ -457,7 +464,7 @@
     }
 
     .content{
-      min-height: 90vh !important;
+      min-height: 100vh !important;
       position: relative;
       background-position: center;
       background-repeat: no-repeat;
@@ -466,6 +473,7 @@
       flex-wrap: wrap;
       align-content: space-between;
       padding-bottom: 50px;
+      z-index: 2;
     }
 
     .pic-container{
@@ -583,7 +591,6 @@
     overflow: hidden;
     background: #460000;
 
-
     @media(max-width: 1200px){
       padding-top: 200px !important;
       padding-bottom: 200px;
@@ -606,7 +613,6 @@
 
     .announce-content{
       position: relative;
-
 
       .bg-pic{
         position: absolute;
@@ -648,6 +654,7 @@
         .secondary-pic-wrapper{
           width: 490px;
           margin-right: -18px;
+          overflow: hidden;
 
           @media(max-width: 1200px){
             width: calc( 45% - 15px);
@@ -658,9 +665,22 @@
             display: none;
           }
 
+          .simpleParallax{
+            transition: all 0.25s;
+            opacity: 0;
+            transform: translateY(55%) scale(0.9);
+          }
+
           img{
             width: 100%;
             height: auto;
+          }
+
+          &.active{
+            .simpleParallax{
+              opacity: 1;
+              transform: translateY(0) scale(1.1);
+            }
           }
         }
       }
@@ -703,15 +723,29 @@
             justify-content: flex-end;
             margin-left: -50vw;*/
 
+            /*.simpleParallax{
+
+            }*/
+
             .simpleParallax{
+              transition: all 0.25s;
               width: 100%;
               height: 100%;
+              opacity: 0;
+              transform: translateY(55%) scale(0.9);
             }
 
             img{
               height: 100%;
               width: 100%;
               object-fit: cover;
+            }
+          }
+
+          &.active{
+            .simpleParallax{
+              opacity: 1;
+              transform: translateY(0) scale(1.1);
             }
           }
         }

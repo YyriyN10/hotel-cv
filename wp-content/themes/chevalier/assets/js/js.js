@@ -63,9 +63,10 @@ $(document).ready(function() {
     menuAnimatePicWrapper.removeClass('active');
     let imageSrc = $(this).find('a').attr('data-image');
     menuAnimatePicWrapper.attr('src', imageSrc);
+
     setTimeout(function () {
       menuAnimatePicWrapper.addClass('active');
-    },500)
+    },250)
 
   });
 
@@ -172,20 +173,30 @@ $(document).ready(function() {
     let firstImageWrapper = thisBlock.find('.first-pic-wrapper img');
     let secondImageWrapper = thisBlock.find('.secondary-pic-wrapper img');
 
+    let animationWrapperFirst = thisBlock.find('.first-pic-wrapper');
+    let animationWrapperSecond = thisBlock.find('.secondary-pic-wrapper');
+
     firstImageWrapper.attr('src', firstImageDefault);
     secondImageWrapper.attr('src', secondImageDefault);
 
     thisBlock.find('.services ul li:first-child a').addClass('active');
 
     thisBlock.find('.services ul li').hover( function () {
+      animationWrapperFirst.removeClass('active');
+      animationWrapperSecond.removeClass('active');
+
       let thisImageFirst = $(this).find('a').attr('data-first');
       let thisImageSecond = $(this).find('a').attr('data-second');
 
       thisBlock.find('.services ul li a').removeClass('active');
       $(this).find('a').addClass('active');
 
-      firstImageWrapper.attr('src', thisImageFirst);
-      secondImageWrapper.attr('src', thisImageSecond);
+      setTimeout(function () {
+        animationWrapperFirst.addClass('active');
+        animationWrapperSecond.addClass('active');
+        firstImageWrapper.attr('src', thisImageFirst);
+        secondImageWrapper.attr('src', thisImageSecond);
+      },300)
     })
   }
 
@@ -235,7 +246,9 @@ $(document).ready(function() {
       modal.css({'display' : 'block'});
     });
 
-    span.on('click', function () {
+    span.on('click', function (e) {
+      e.preventDefault();
+
       modal.css({'display' : 'none'});
     })
 

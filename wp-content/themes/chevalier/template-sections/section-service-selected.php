@@ -41,15 +41,16 @@
       </div>
     </div>
 
-	  <?php if( $section['headline']['fionove_zobrazhennya'] ):?>
-      <div class="pic-container">
-        <img
-            class="parallax-image"
-            src="<?php echo $section['headline']['fionove_zobrazhennya'];?>"
-        >
-      </div>
-	  <?php endif;?>
+
   </div>
+	<?php if( $section['headline']['fionove_zobrazhennya'] ):?>
+    <div class="pic-container">
+      <img
+          class="parallax-image"
+          src="<?php echo $section['headline']['fionove_zobrazhennya'];?>"
+      >
+    </div>
+	<?php endif;?>
 
   <!--<div class="announce-media">
 

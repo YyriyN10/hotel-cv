@@ -88,7 +88,7 @@ get_header(); ?>
   <script>
     var scriptCommon = document.createElement('script');
     var dt = new Date().getTime();
-    scriptCommon.src ='<subdomain>.servioreservation.com/common_file_js?dt=' + dt + '&frame=true';
+    scriptCommon.src ='hotel-chevalier.servioreservation.com/common_file_js?dt=' + dt + '&frame=true';
     document.getElementsByTagName('head')[0].appendChild(scriptCommon);
   </script>
 <?php get_footer(); ?>
